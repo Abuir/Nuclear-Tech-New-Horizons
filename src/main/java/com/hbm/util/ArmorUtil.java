@@ -44,42 +44,38 @@ public class ArmorUtil {
 	 */
 
 	public static void register() {
-		ArmorRegistry.registerHazard(ModItems.gas_mask_filter, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.GAS_BLISTERING, HazardClass.BACTERIA);
-		ArmorRegistry.registerHazard(ModItems.gas_mask_filter_mono, HazardClass.PARTICLE_COARSE, HazardClass.GAS_MONOXIDE);
-		ArmorRegistry.registerHazard(ModItems.gas_mask_filter_combo, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.GAS_BLISTERING, HazardClass.BACTERIA, HazardClass.GAS_MONOXIDE);
-		ArmorRegistry.registerHazard(ModItems.gas_mask_filter_rag, HazardClass.PARTICLE_COARSE);
-		ArmorRegistry.registerHazard(ModItems.gas_mask_filter_piss, HazardClass.PARTICLE_COARSE, HazardClass.GAS_LUNG);
-
-		ArmorRegistry.registerHazard(ModItems.gas_mask, HazardClass.SAND, HazardClass.LIGHT);
-		ArmorRegistry.registerHazard(ModItems.gas_mask_m65, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.mask_rag, HazardClass.PARTICLE_COARSE);
-		ArmorRegistry.registerHazard(ModItems.mask_piss, HazardClass.PARTICLE_COARSE, HazardClass.GAS_LUNG);
-
-		ArmorRegistry.registerHazard(ModItems.goggles, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.ashglasses, HazardClass.LIGHT, HazardClass.SAND);
-
-		ArmorRegistry.registerHazard(ModItems.attachment_mask, HazardClass.SAND);
-
-		ArmorRegistry.registerHazard(ModItems.asbestos_helmet, HazardClass.SAND, HazardClass.LIGHT);
-		ArmorRegistry.registerHazard(ModItems.hazmat_helmet, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.hazmat_helmet_red, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.hazmat_helmet_grey, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.hazmat_paa_helmet, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.liquidator_helmet, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.t45_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.t51_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.ajr_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.ajro_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.steamsuit_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.hev_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.fau_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.dns_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.schrabidium_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.euphemium_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.rpa_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.envsuit_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
-		ArmorRegistry.registerHazard(ModItems.trenchmaster_helmet, HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
-
+		ArmorRegistry.registerHazard(ModItems.gas_mask_filter, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.NERVE_AGENT });
+    	ArmorRegistry.registerHazard(ModItems.gas_mask_filter_mono, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.GAS_MONOXIDE });
+    	ArmorRegistry.registerHazard(ModItems.gas_mask_filter_combo, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.NERVE_AGENT });
+    	ArmorRegistry.registerHazard(ModItems.gas_mask_filter_rag, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE });
+    	ArmorRegistry.registerHazard(ModItems.gas_mask_filter_piss, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.GAS_LUNG });
+    	ArmorRegistry.registerHazard(ModItems.gas_mask, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.SAND, ArmorRegistry.HazardClass.LIGHT });
+    	ArmorRegistry.registerHazard(ModItems.gas_mask_m65, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.SAND });
+    	ArmorRegistry.registerHazard(ModItems.mask_rag, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE });
+    	ArmorRegistry.registerHazard(ModItems.mask_piss, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.GAS_LUNG });
+    	ArmorRegistry.registerHazard(ModItems.goggles, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND });
+    	ArmorRegistry.registerHazard(ModItems.ashglasses, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND });
+    	ArmorRegistry.registerHazard(ModItems.attachment_mask, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.SAND });
+    	ArmorRegistry.registerHazard(ModItems.asbestos_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.SAND, ArmorRegistry.HazardClass.LIGHT });
+    	ArmorRegistry.registerHazard(ModItems.hazmat_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.SAND });
+    	ArmorRegistry.registerHazard(ModItems.hazmat_helmet_red, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.SAND });
+    	ArmorRegistry.registerHazard(ModItems.hazmat_helmet_grey, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.SAND });
+    	ArmorRegistry.registerHazard(ModItems.hazmat_paa_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND });
+    	ArmorRegistry.registerHazard(ModItems.liquidator_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND });
+    	ArmorRegistry.registerHazard(ModItems.t45_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.SAND, ArmorRegistry.HazardClass.NERVE_AGENT });
+    	ArmorRegistry.registerHazard(ModItems.t51_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.SAND, ArmorRegistry.HazardClass.NERVE_AGENT });
+    	ArmorRegistry.registerHazard(ModItems.ajr_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND, ArmorRegistry.HazardClass.NERVE_AGENT });
+    	ArmorRegistry.registerHazard(ModItems.ajro_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND, ArmorRegistry.HazardClass.NERVE_AGENT });
+    	ArmorRegistry.registerHazard(ModItems.steamsuit_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND });
+    	ArmorRegistry.registerHazard(ModItems.hev_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND, ArmorRegistry.HazardClass.NERVE_AGENT });
+    	ArmorRegistry.registerHazard(ModItems.fau_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND, ArmorRegistry.HazardClass.NERVE_AGENT, ArmorRegistry.HazardClass.RAD_GAS });
+    	ArmorRegistry.registerHazard(ModItems.dns_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND, ArmorRegistry.HazardClass.NERVE_AGENT, ArmorRegistry.HazardClass.RAD_GAS });
+    	ArmorRegistry.registerHazard(ModItems.schrabidium_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND, ArmorRegistry.HazardClass.NERVE_AGENT });
+    	ArmorRegistry.registerHazard(ModItems.euphemium_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND, ArmorRegistry.HazardClass.NERVE_AGENT, ArmorRegistry.HazardClass.RAD_GAS });
+    	ArmorRegistry.registerHazard(ModItems.rpa_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND, ArmorRegistry.HazardClass.NERVE_AGENT });
+    	ArmorRegistry.registerHazard(ModItems.envsuit_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND });
+    	ArmorRegistry.registerHazard(ModItems.trenchmaster_helmet, new ArmorRegistry.HazardClass[] { ArmorRegistry.HazardClass.PARTICLE_COARSE, ArmorRegistry.HazardClass.PARTICLE_FINE, ArmorRegistry.HazardClass.GAS_LUNG, ArmorRegistry.HazardClass.BACTERIA, ArmorRegistry.HazardClass.GAS_BLISTERING, ArmorRegistry.HazardClass.GAS_MONOXIDE, ArmorRegistry.HazardClass.LIGHT, ArmorRegistry.HazardClass.SAND });
+    
 		//Ob ihr wirklich richtig steht, seht ihr wenn das Licht angeht!
 		registerIfExists(Compat.MOD_GT6, "gt.armor.hazmat.universal.head", HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
 		registerIfExists(Compat.MOD_GT6, "gt.armor.hazmat.biochemgas.head", HazardClass.PARTICLE_COARSE, HazardClass.PARTICLE_FINE, HazardClass.GAS_LUNG, HazardClass.BACTERIA, HazardClass.GAS_BLISTERING, HazardClass.GAS_MONOXIDE, HazardClass.LIGHT, HazardClass.SAND);
