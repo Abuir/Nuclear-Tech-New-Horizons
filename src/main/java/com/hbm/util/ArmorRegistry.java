@@ -20,14 +20,14 @@ public class ArmorRegistry {
   public static boolean hasAllProtection(EntityLivingBase entity, int slot, HazardClass... clazz) {
     if (ArmorUtil.checkArmorNull(entity, slot))
       return false; 
-    List<HazardClass> list = getProtectionFromItem(entity.func_71124_b(slot + 1), entity);
+    List<HazardClass> list = getProtectionFromItem(entity.getEquipmentInSlot(slot + 1), entity);
     return list.containsAll(Arrays.asList((Object[])clazz));
   }
   
   public static boolean hasAnyProtection(EntityLivingBase entity, int slot, HazardClass... clazz) {
     if (ArmorUtil.checkArmorNull(entity, slot))
       return false; 
-    List<HazardClass> list = getProtectionFromItem(entity.func_71124_b(slot + 1), entity);
+    List<HazardClass> list = getProtectionFromItem(entity.getEquipmentInSlot(slot + 1), entity);
     if (list == null)
       return false; 
     for (HazardClass haz : clazz) {
@@ -40,7 +40,7 @@ public class ArmorRegistry {
   public static boolean hasProtection(EntityLivingBase entity, int slot, HazardClass clazz) {
     if (ArmorUtil.checkArmorNull(entity, slot))
       return false; 
-    List<HazardClass> list = getProtectionFromItem(entity.func_71124_b(slot + 1), entity);
+    List<HazardClass> list = getProtectionFromItem(entity.getEquipmentInSlot(slot + 1), entity);
     if (list == null)
       return false; 
     return list.contains(clazz);
@@ -48,14 +48,14 @@ public class ArmorRegistry {
   
   public static List<HazardClass> getProtectionFromItem(ItemStack stack, EntityLivingBase entity) {
     List<HazardClass> prot = new ArrayList<>();
-    Item item = stack.func_77973_b();
+    Item item = stack.getItem();
     if (hazardClasses.containsKey(item))
       prot.addAll(hazardClasses.get(item)); 
     if (item instanceof IGasMask) {
       IGasMask mask = (IGasMask)item;
       ItemStack filter = mask.getFilter(stack, entity);
       if (filter != null) {
-        List<HazardClass> filProt = (List<HazardClass>)((ArrayList)hazardClasses.get(filter.func_77973_b())).clone();
+        List<HazardClass> filProt = (List<HazardClass>)((ArrayList)hazardClasses.get(filter.getItem())).clone();
         for (HazardClass c : mask.getBlacklist(stack, entity))
           filProt.remove(c); 
         prot.addAll(filProt);

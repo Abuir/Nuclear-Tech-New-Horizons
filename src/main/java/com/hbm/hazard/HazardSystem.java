@@ -46,7 +46,7 @@ public class HazardSystem {
     if (o instanceof Item)
       itemMap.put((Item)o, data); 
     if (o instanceof Block)
-      itemMap.put(Item.func_150898_a((Block)o), data); 
+      itemMap.put(Item.getItemFromBlock((Block)o), data); 
     if (o instanceof ItemStack)
       stackMap.put(new RecipesCommon.ComparableStack((ItemStack)o), data); 
     if (o instanceof RecipesCommon.ComparableStack)
@@ -93,8 +93,8 @@ public class HazardSystem {
       if (oreMap.containsKey(name))
         chronological.add(oreMap.get(name)); 
     } 
-    if (itemMap.containsKey(stack.func_77973_b()))
-      chronological.add(itemMap.get(stack.func_77973_b())); 
+    if (itemMap.containsKey(stack.getItem()))
+      chronological.add(itemMap.get(stack.getItem())); 
     RecipesCommon.ComparableStack comp = (new RecipesCommon.ComparableStack(stack)).makeSingular();
     if (stackMap.containsKey(comp))
       chronological.add(stackMap.get(comp)); 
@@ -131,15 +131,15 @@ public class HazardSystem {
   }
   
   public static void updatePlayerInventory(EntityPlayer player) {
-    for (int i = 0; i < player.field_71071_by.field_70462_a.length; i++) {
-      ItemStack stack = player.field_71071_by.field_70462_a[i];
+    for (int i = 0; i < player.inventory.mainInventory.length; i++) {
+      ItemStack stack = player.inventory.mainInventory[i];
       if (stack != null) {
         applyHazards(stack, (EntityLivingBase)player);
-        if (stack.field_77994_a == 0)
-          player.field_71071_by.field_70462_a[i] = null; 
+        if (stack.stackSize == 0)
+          player.inventory.mainInventory[i] = null; 
       } 
     } 
-    for (ItemStack stack : player.field_71071_by.field_70460_b) {
+    for (ItemStack stack : player.inventory.armorInventory) {
       if (stack != null)
         applyHazards(stack, (EntityLivingBase)player); 
     } 
@@ -147,15 +147,15 @@ public class HazardSystem {
   
   public static void updateLivingInventory(EntityLivingBase entity) {
     for (int i = 0; i < 5; i++) {
-      ItemStack stack = entity.func_71124_b(i);
+      ItemStack stack = entity.getEquipmentInSlot(i);
       if (stack != null)
         applyHazards(stack, entity); 
     } 
   }
   
   public static void updateDroppedItem(EntityItem entity) {
-    ItemStack stack = entity.func_92059_d();
-    if (entity.field_70128_L || stack == null || stack.func_77973_b() == null || stack.field_77994_a <= 0)
+    ItemStack stack = entity.getEntityItem();
+    if (entity.isDead || stack == null || stack.getItem() == null || stack.stackSize <= 0)
       return; 
     List<HazardEntry> hazards = getHazardsFromStack(stack);
     for (HazardEntry entry : hazards)

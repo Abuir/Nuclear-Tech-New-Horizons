@@ -307,11 +307,11 @@ public class HazardRegistry {
   public static final HazardTypeBase TOXIC = (HazardTypeBase)new HazardTypeToxic();
   
   public static void registerItems() {
-    HazardSystem.register(Items.field_151016_H, makeData(EXPLOSIVE, 1.0F));
-    HazardSystem.register(Blocks.field_150335_W, makeData(EXPLOSIVE, 4.0F));
-    HazardSystem.register(Items.field_151158_bO, makeData(EXPLOSIVE, 1.0F));
-    HazardSystem.register(new ItemStack(Item.func_150898_a(ModBlocks.bobblehead), 1, 22), makeData(ASBESTOS, 1.0F));
-    HazardSystem.register(new ItemStack(Item.func_150898_a(ModBlocks.bobblehead), 1, 25), makeData(GLITCH, 1.0F));
+    HazardSystem.register(Items.gunpowder, makeData(EXPLOSIVE, 1.0F));
+    HazardSystem.register(Blocks.tnt, makeData(EXPLOSIVE, 4.0F));
+    HazardSystem.register(Items.pumpkin_pie, makeData(EXPLOSIVE, 1.0F));
+    HazardSystem.register(new ItemStack(Item.getItemFromBlock(ModBlocks.bobblehead), 1, 22), makeData(ASBESTOS, 1F)); //this works okay
+	HazardSystem.register(new ItemStack(Item.getItemFromBlock(ModBlocks.bobblehead), 1, 25), makeData(GLITCH, 1F)); 
     HazardSystem.register(ModItems.ammonium_nitrate, makeData(EXPLOSIVE, 4.0F));
     HazardSystem.register(ModItems.ball_dynamite, makeData(EXPLOSIVE, 2.0F));
     HazardSystem.register(ModItems.stick_dynamite, makeData(EXPLOSIVE, 1.0F));
