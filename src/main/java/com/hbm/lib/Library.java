@@ -46,6 +46,7 @@ public class Library {
 	public static final ForgeDirection NEG_Y = ForgeDirection.DOWN;
 	public static final ForgeDirection POS_Z = ForgeDirection.SOUTH;
 	public static final ForgeDirection NEG_Z = ForgeDirection.NORTH;
+	public static final int[] powersOfTen = new int[] { 1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000 };
 
 	/*
 	 * Is putting this into this trash can a good idea? No. Do I have a better idea? Not currently.
@@ -313,4 +314,13 @@ public class Library {
 		if(i <= 10) return ModBlocks.brick_concrete_mossy;
 		return ModBlocks.brick_concrete;
 	}
+	
+  	public static float roundFloat(float number, int decimal) {
+  	  return Math.round(number * powersOfTen[decimal]) / powersOfTen[decimal];
+  	}
+  
+  	public static float roundFloat(double number, int decimal) {
+  	  return (float)Math.round(number * powersOfTen[decimal]) / powersOfTen[decimal];
+  	}
 }
+
