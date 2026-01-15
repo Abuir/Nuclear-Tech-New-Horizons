@@ -29,7 +29,7 @@ public class BlockGasRadon extends BlockGasBase {
 		
 		EntityLivingBase entityLiving = (EntityLivingBase) entity;
 		
-		if(ArmorRegistry.hasAllProtection(entityLiving, 3, HazardClass.PARTICLE_FINE)) {
+		if(ArmorRegistry.hasAllProtection(entityLiving, 3, HazardClass.RAD_GAS)) {
 			ArmorUtil.damageGasMaskFilter(entityLiving, 1);
 		} else {
 			ContaminationUtil.contaminate((EntityLivingBase)entity, HazardType.RADIATION, ContaminationType.RAD_BYPASS, 0.05F);
