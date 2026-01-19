@@ -43,275 +43,275 @@ import net.minecraftforge.fluids.FluidRegistry;
 
 public class HazardRegistry {
   public static final float gen_S = 10000.0F;
-  
+
   public static final float gen_H = 2000.0F;
-  
+
   public static final float gen_10D = 100.0F;
-  
+
   public static final float gen_100D = 80.0F;
-  
+
   public static final float gen_1Y = 50.0F;
-  
+
   public static final float gen_10Y = 30.0F;
-  
+
   public static final float gen_100Y = 10.0F;
-  
+
   public static final float gen_1K = 7.5F;
-  
+
   public static final float gen_10K = 6.25F;
-  
+
   public static final float gen_100K = 5.0F;
-  
+
   public static final float gen_1M = 2.5F;
-  
+
   public static final float gen_10M = 1.5F;
-  
+
   public static final float gen_100M = 1.0F;
-  
+
   public static final float gen_1B = 0.5F;
-  
+
   public static final float gen_10B = 0.1F;
-  
+
   public static final float co60 = 30.0F;
-  
+
   public static final float sr90 = 15.0F;
-  
+
   public static final float tc99 = 2.75F;
-  
+
   public static final float i131 = 150.0F;
-  
+
   public static final float xe135 = 1250.0F;
-  
+
   public static final float cs137 = 20.0F;
-  
+
   public static final float au198 = 500.0F;
-  
+
   public static final float pb209 = 10000.0F;
-  
+
   public static final float at209 = 7500.0F;
-  
+
   public static final float po210 = 75.0F;
-  
+
   public static final float ra226 = 7.5F;
-  
+
   public static final float ac227 = 30.0F;
-  
+
   public static final float th232 = 0.1F;
-  
+
   public static final float thf = 1.75F;
-  
+
   public static final float u = 0.35F;
-  
+
   public static final float u233 = 5.0F;
-  
+
   public static final float u235 = 1.0F;
-  
+
   public static final float u238 = 0.25F;
-  
+
   public static final float uf = 0.5F;
-  
+
   public static final float np237 = 2.5F;
-  
+
   public static final float npf = 1.5F;
-  
+
   public static final float pu = 7.5F;
-  
+
   public static final float purg = 6.25F;
-  
+
   public static final float pu238 = 10.0F;
-  
+
   public static final float pu239 = 5.0F;
-  
+
   public static final float pu240 = 7.5F;
-  
+
   public static final float pu241 = 25.0F;
-  
+
   public static final float puf = 4.25F;
-  
+
   public static final float am241 = 8.5F;
-  
+
   public static final float cm242 = 9.3F;
-  
+
   public static final float cm243 = 5.6F;
-  
+
   public static final float cm244 = 2.0F;
-  
+
   public static final float cm245 = 0.8F;
-  
+
   public static final float cm246 = 2.5F;
-  
+
   public static final float cm247 = 0.2F;
-  
+
   public static final float cmrg = 6.0F;
-  
+
   public static final float cmf = 2.2F;
-  
+
   public static final float bk247 = 10.5F;
-  
+
   public static final float cf251 = 14.3F;
-  
+
   public static final float cf252 = 15.3F;
-  
+
   public static final float es253 = 18.3F;
-  
+
   public static final float es255 = 19.3F;
-  
+
   public static final float am242 = 9.5F;
-  
+
   public static final float amrg = 9.0F;
-  
+
   public static final float amf = 4.75F;
-  
+
   public static final float mox = 2.5F;
-  
+
   public static final float sa326 = 15.0F;
-  
+
   public static final float sa327 = 17.5F;
-  
+
   public static final float saf = 5.85F;
-  
+
   public static final float sas3 = 5.0F;
-  
+
   public static final float gh336 = 5.0F;
-  
+
   public static final float mud = 1.0F;
-  
+
   public static final float cn989 = 89.0F;
-  
+
   public static final float radsource_mult = 3.0F;
-  
+
   public static final float pobe = 225.0F;
-  
+
   public static final float rabe = 22.5F;
-  
+
   public static final float pube = 30.0F;
-  
+
   public static final float zfb_bi = 0.35F;
-  
+
   public static final float zfb_pu241 = 12.5F;
-  
+
   public static final float zfb_am_mix = 4.5F;
-  
+
   public static final float bf = 300000.0F;
-  
+
   public static final float bfb = 500000.0F;
-  
+
   public static final float radspice = 20000.0F;
-  
+
   public static final float unof = 10000.0F;
-  
+
   public static final float ts = 120.0F;
-  
+
   public static final float sr = 1.5F;
-  
+
   public static final float sb = 3.0F;
-  
+
   public static final float trx = 25.0F;
-  
+
   public static final float trn = 0.1F;
-  
+
   public static final float wst = 450.0F;
-  
+
   public static final float wstv = 150.0F;
-  
+
   public static final float yc = 0.42000002F;
-  
+
   public static final float fo = 10.0F;
-  
+
   public static final float nugget = 0.11F;
-  
+
   public static final float ingot = 1.0F;
-  
+
   public static final float gem = 1.0F;
-  
+
   public static final float plate = 1.0F;
-  
+
   public static final float plateCast = 3.0F;
-  
+
   public static final float plateWeld = 6.0F;
-  
+
   public static final float heavyComp = 768.0F;
-  
+
   public static final float wire = 0.11F;
-  
+
   public static final float wireDense = 1.0F;
-  
+
   public static final float pipe = 3.0F;
-  
+
   public static final float shell = 4.0F;
-  
+
   public static final float bolt = 0.11F;
-  
+
   public static final float powder_mult = 3.0F;
-  
+
   public static final float powder = 3.0F;
-  
+
   public static final float powder_tiny = 0.32999998F;
-  
+
   public static final float ore = 0.8F;
-  
+
   public static final float specore = 1.0F;
-  
+
   public static final float block = 9.0F;
-  
+
   public static final float crystal = 9.0F;
-  
+
   public static final float billet = 0.5F;
-  
+
   public static final float rtg = 1.5F;
-  
+
   public static final float rod = 0.5F;
-  
+
   public static final float rod_dual = 1.0F;
-  
+
   public static final float rod_quad = 2.0F;
-  
+
   public static final float rod_rbmk = 4.0F;
-  
+
   public static final float magt = 0.825F;
-  
+
   public static final float tcalloy = 0.07F;
-  
+
   public static final float ferro = 0.175F;
-  
-  public static final float lead = 150.0F;
-  
-  public static final float merc = 600.0F;
-  
-  public static final float ars = 15000.0F;
-  
+
+  public static final float lead = 15.0F;
+
+  public static final float merc = 60.0F;
+
+  public static final float ars = 1500.0F;
+
   public static final HazardTypeBase RADIATION = (HazardTypeBase)new HazardTypeRadiation();
-  
+
   public static final HazardTypeBase DIGAMMA = (HazardTypeBase)new HazardTypeDigamma();
-  
+
   public static final HazardTypeBase HOT = (HazardTypeBase)new HazardTypeHot();
-  
+
   public static final HazardTypeBase BLINDING = (HazardTypeBase)new HazardTypeBlinding();
-  
+
   public static final HazardTypeBase ASBESTOS = (HazardTypeBase)new HazardTypeAsbestos();
-  
+
   public static final HazardTypeBase COAL = (HazardTypeBase)new HazardTypeCoal();
-  
+
   public static final HazardTypeBase HYDROACTIVE = (HazardTypeBase)new HazardTypeHydroactive();
-  
+
   public static final HazardTypeBase EXPLOSIVE = (HazardTypeBase)new HazardTypeExplosive();
-  
+
   public static final HazardTypeBase AUTISM = (HazardTypeBase)new HazardTypeAutism();
-  
+
   public static final HazardTypeBase GLITCH = (HazardTypeBase)new HazardTypeGlitch();
-  
+
   public static final HazardTypeBase NEUTRON = (HazardTypeBase)new HazardTypeNeutron();
-  
+
   public static final HazardTypeBase CRYOGENIC = (HazardTypeBase)new HazardTypeCryogenic();
-  
+
   public static final HazardTypeBase TOXIC = (HazardTypeBase)new HazardTypeToxic();
-  
+
   public static void registerItems() {
     HazardSystem.register(Items.gunpowder, makeData(EXPLOSIVE, 1.0F));
     HazardSystem.register(Blocks.tnt, makeData(EXPLOSIVE, 4.0F));
     HazardSystem.register(Items.pumpkin_pie, makeData(EXPLOSIVE, 1.0F));
     HazardSystem.register(new ItemStack(Item.getItemFromBlock(ModBlocks.bobblehead), 1, 22), makeData(ASBESTOS, 1F)); //this works okay
-	HazardSystem.register(new ItemStack(Item.getItemFromBlock(ModBlocks.bobblehead), 1, 25), makeData(GLITCH, 1F)); 
+	HazardSystem.register(new ItemStack(Item.getItemFromBlock(ModBlocks.bobblehead), 1, 25), makeData(GLITCH, 1F));
     HazardSystem.register(ModItems.ammonium_nitrate, makeData(EXPLOSIVE, 4.0F));
     HazardSystem.register(ModItems.ball_dynamite, makeData(EXPLOSIVE, 2.0F));
     HazardSystem.register(ModItems.stick_dynamite, makeData(EXPLOSIVE, 1.0F));
@@ -385,22 +385,23 @@ public class HazardRegistry {
     registerHazItem(ModItems.glowing_stew, 2.0F);
     registerHazItem(ModItems.balefire_scrambled, 360000.0F, 6.0F, 30.0F, 1000.0F, 6.0F);
     registerHazItem(ModItems.balefire_and_ham, 420000.0F, 30.0F, 30.0F, 2000.0F, 6.0F);
+
     HazardSystem.register(ModItems.powder_poison, makeData(TOXIC, 12000.0F));
-    HazardSystem.register(ModItems.nugget_lead, makeData(TOXIC, 16.5F));
-    HazardSystem.register(ModItems.ingot_lead, makeData(TOXIC, 150.0F));
-    HazardSystem.register(ModItems.crystal_lead, makeData(TOXIC, 1350.0F));
-    HazardSystem.register(ModBlocks.block_lead, makeData(TOXIC, 1350.0F));
-    HazardSystem.register(ModItems.powder_lead, makeData(TOXIC, 450.0F));
-    HazardSystem.register(ModItems.plate_lead, makeData(TOXIC, 150.0F));
-    HazardSystem.register(OreDictManager.PB.plateCast(), makeData(TOXIC, 450.0F));
-    HazardSystem.register(OreDictManager.PB.pipe(), makeData(TOXIC, 450.0F));
-    HazardSystem.register(OreDictManager.PB.fragment(), makeData(TOXIC, 16.5F));
-    HazardSystem.register(OreDictManager.PB.wireFine(), makeData(TOXIC, 16.5F));
-    HazardSystem.register(ModItems.nugget_mercury, makeData(TOXIC, 66.0F));
-    HazardSystem.register(ModItems.ingot_mercury, makeData(TOXIC, 600.0F));
-    HazardSystem.register(ModItems.nugget_arsenic, makeData(TOXIC, 1650.0F));
-    HazardSystem.register(ModItems.ingot_arsenic, makeData(TOXIC, 15000.0F));
-    HazardSystem.register(OreDictManager.AS.fragment(), makeData(TOXIC, 12000.0F));
+    HazardSystem.register(ModItems.nugget_lead, makeData(TOXIC, lead*nugget));
+    HazardSystem.register(ModItems.ingot_lead, makeData(TOXIC, lead*ingot));
+    HazardSystem.register(ModItems.crystal_lead, makeData(TOXIC, lead*crystal));
+    HazardSystem.register(ModBlocks.block_lead, makeData(TOXIC, lead*block));
+    HazardSystem.register(ModItems.powder_lead, makeData(TOXIC, lead*powder));
+    HazardSystem.register(ModItems.plate_lead, makeData(TOXIC, lead*plate));
+    HazardSystem.register(OreDictManager.PB.plateCast(), makeData(TOXIC, lead*plateCast));
+    HazardSystem.register(OreDictManager.PB.pipe(), makeData(TOXIC, lead*pipe));
+    HazardSystem.register(OreDictManager.PB.fragment(), makeData(TOXIC, lead*ore));
+    HazardSystem.register(OreDictManager.PB.wireFine(), makeData(TOXIC, lead*wire));
+    HazardSystem.register(ModItems.nugget_mercury, makeData(TOXIC, merc*nugget));
+    HazardSystem.register(ModItems.ingot_mercury, makeData(TOXIC, merc*ingot));
+    HazardSystem.register(ModItems.nugget_arsenic, makeData(TOXIC, ars*nugget));
+    HazardSystem.register(ModItems.ingot_arsenic, makeData(TOXIC, ars*ingot));
+    HazardSystem.register(OreDictManager.AS.fragment(), makeData(TOXIC, ars*ore));
     HazardSystem.register(ModItems.ingot_arsenic_bronze, makeData(TOXIC, 1650.0F));
     HazardSystem.register(OreDictManager.ABRONZE.lightBarrel(), makeData(TOXIC, 6600.0F));
     HazardSystem.register(OreDictManager.ABRONZE.plateCast(), makeData(TOXIC, 4950.0F));
@@ -456,7 +457,7 @@ public class HazardRegistry {
       registerHazItem(ModItems.schrabidium_boots, 60.0F, 0.0F, 50.0F);
       registerHazItem(ModItems.schrabidium_sword, 135.0F, 0.0F, 50.0F);
       registerHazItem(ModItems.balefire_and_steel, 33000.0F, 5.0F);
-    } 
+    }
     HazardSystem.register(new ItemStack(ModBlocks.sellafield, 1, 0), makeData(RADIATION, 0.5F));
     HazardSystem.register(new ItemStack(ModBlocks.sellafield, 1, 1), makeData(RADIATION, 1.0F));
     HazardSystem.register(new ItemStack(ModBlocks.sellafield, 1, 2), makeData(RADIATION, 2.5F));
@@ -574,7 +575,7 @@ public class HazardRegistry {
       registerHazItem(new ItemStack(ModBlocks.waste_earth, 1, i), ((i + 1) * 4));
       registerHazItem(new ItemStack(ModBlocks.waste_trinitite, 1, i), ((i + 1) * 10));
       registerHazItem(new ItemStack(ModBlocks.waste_trinitite_red, 1, i), ((i + 1) * 10));
-    } 
+    }
     HazardSystem.register(new ItemStack(ModItems.pellet_rtg_depleted, 1, ItemRTGPelletDepleted.DepletedRTGMaterial.NEPTUNIUM.ordinal()), makeData(RADIATION, 3.75F));
     HazardSystem.register(new ItemStack(ModItems.pellet_rtg_depleted, 1, ItemRTGPelletDepleted.DepletedRTGMaterial.AMERICIUM.ordinal()), makeData(RADIATION, 13.5F));
     HazardSystem.register(ModItems.pile_rod_uranium, makeData(RADIATION, 0.525F));
@@ -750,26 +751,28 @@ public class HazardRegistry {
     HazardSystem.register(ModBlocks.nuke_fstbmb, makeData(DIGAMMA, 0.01F));
     HazardSystem.register(OreDictManager.DictFrame.fromOne(ModItems.holotape_image, (Enum)ItemHolotapeImage.EnumHoloImage.HOLO_RESTORED), makeData(DIGAMMA, 1.0F));
     HazardSystem.register(ModItems.holotape_damaged, makeData(DIGAMMA, 1000.0F));
+
     for (String oreg : OreDictManager.AS.all(MaterialShapes.ORE))
-      HazardSystem.register(oreg, makeData(TOXIC, 12000.0F)); 
+      HazardSystem.register(oreg, makeData(TOXIC, 12000.0F));
     for (String oreg : OreDictManager.PB.all(MaterialShapes.ORE))
-      HazardSystem.register(oreg, makeData(TOXIC, 120.0F)); 
+      HazardSystem.register(oreg, makeData(TOXIC, 120.0F));
+
     Item recWaste = Compat.tryLoadItem("ReactorCraft", "reactorcraft_item_waste");
     if (recWaste != null)
       for (Compat.ReikaIsotope reikaIsotope : Compat.ReikaIsotope.values()) {
         if (reikaIsotope.getRad() > 0.0F)
-          HazardSystem.register(new ItemStack(recWaste, 1, reikaIsotope.ordinal()), makeData(RADIATION, reikaIsotope.getRad())); 
-      }  
+          HazardSystem.register(new ItemStack(recWaste, 1, reikaIsotope.ordinal()), makeData(RADIATION, reikaIsotope.getRad()));
+      }
     if (Compat.isModLoaded("gregtech")) {
       Object[][] data = { { "Naquadah", Float.valueOf(0.35F) }, { "Naquadah-Enriched", Float.valueOf(1.0F) }, { "Naquadria", Float.valueOf(5.0F) } };
       for (MaterialShapes shape : MaterialShapes.allShapes) {
         if (!shape.noAutogen)
           for (String prefix : shape.prefixes) {
             for (Object[] o : data)
-              HazardSystem.register(prefix + o[0], (new HazardData()).setMutex(1).addEntry(new HazardEntry(RADIATION, ((Float)o[1]).floatValue() * shape.q(1) / MaterialShapes.INGOT.q(1)))); 
-          }  
-      } 
-    } 
+              HazardSystem.register(prefix + o[0], (new HazardData()).setMutex(1).addEntry(new HazardEntry(RADIATION, ((Float)o[1]).floatValue() * shape.q(1) / MaterialShapes.INGOT.q(1))));
+          }
+      }
+    }
     registerHazItem(ModBlocks.hadron_coil_magtung, 1.65F);
     registerHazItem(ModBlocks.hadron_coil_schrabidium, 31.65F);
     registerHazItem(ModBlocks.hadron_coil_schrabidate, 36.0F);
@@ -799,186 +802,186 @@ public class HazardRegistry {
     registerFluid("liquidhydrogen", 0.0F, 0.0F, 0.0F, 4.0F, 0.0F);
     registerFluid("nitroglycerin", 0.0F, 0.0F, 0.0F, 10.0F, 0.0F);
   }
-  
+
   public static void registerTrafos() {
     HazardSystem.trafos.add(new HazardTransformerRadiationNBT());
     if (!GeneralConfig.enableLBSM || !GeneralConfig.enableLBSMSafeCrates)
-      HazardSystem.trafos.add(new HazardTransformerRadiationContainer()); 
+      HazardSystem.trafos.add(new HazardTransformerRadiationContainer());
     if (!GeneralConfig.enableLBSM || !GeneralConfig.enableLBSMSafeMEDrives)
-      HazardSystem.trafos.add(new HazardTransformerRadiationME()); 
+      HazardSystem.trafos.add(new HazardTransformerRadiationME());
   }
-  
+
   private static void registerHazItem(Object item, float rads) {
     registerHazItem(item, rads, 0.0F, 0.0F, 0.0F, 0.0F);
   }
-  
+
   private static void registerHazItem(Object item, float rads, float hot) {
     registerHazItem(item, rads, hot, 0.0F, 0.0F, 0.0F);
   }
-  
+
   private static void registerHazItem(Object item, float rads, float hot, float blind) {
     registerHazItem(item, rads, hot, blind, 0.0F, 0.0F);
   }
-  
+
   private static void registerHazItem(Object item, float rads, float hot, float blind, float tox, float hydro) {
     HazardData data = new HazardData();
     if (rads > 0.0F)
-      data.addEntry(new HazardEntry(RADIATION, rads)); 
+      data.addEntry(new HazardEntry(RADIATION, rads));
     if (hot > 0.0F)
-      data.addEntry(new HazardEntry(HOT, hot)); 
+      data.addEntry(new HazardEntry(HOT, hot));
     if (tox > 0.0F)
-      data.addEntry(new HazardEntry(TOXIC, tox)); 
+      data.addEntry(new HazardEntry(TOXIC, tox));
     if (blind > 0.0F)
-      data.addEntry(new HazardEntry(BLINDING, hot)); 
+      data.addEntry(new HazardEntry(BLINDING, hot));
     if (hydro > 0.0F)
-      data.addEntry(new HazardEntry(HYDROACTIVE, hydro)); 
+      data.addEntry(new HazardEntry(HYDROACTIVE, hydro));
     if (!data.entries.isEmpty())
-      HazardSystem.register(item, data); 
+      HazardSystem.register(item, data);
   }
-  
+
   private static void registerFluid(String f, float rads, float blind) {
     registerFluid(f, rads, blind, 0.0F, 0.0F, 0.0F);
   }
-  
+
   private static void registerFluid(String f, float rads, float blind, float tox, float expl, float dig) {
     Fluid fluid = FluidRegistry.getFluid(f);
     if (fluid == null)
-      return; 
+      return;
     int temp = fluid.getTemperature() - 273;
     HazardData data = new HazardData();
     if (rads > 0.0F)
-      data.addEntry(new HazardEntry(RADIATION, rads)); 
+      data.addEntry(new HazardEntry(RADIATION, rads));
     if (temp > 100)
-      data.addEntry(new HazardEntry(HOT, Math.min(50.0F, temp / 50.0F))); 
+      data.addEntry(new HazardEntry(HOT, Math.min(50.0F, temp / 50.0F)));
     if (temp < -60)
-      data.addEntry(new HazardEntry(CRYOGENIC, Math.abs(temp / 20.0F))); 
+      data.addEntry(new HazardEntry(CRYOGENIC, Math.abs(temp / 20.0F)));
     if (tox > 0.0F)
-      data.addEntry(new HazardEntry(TOXIC, tox)); 
+      data.addEntry(new HazardEntry(TOXIC, tox));
     if (blind > 0.0F)
-      data.addEntry(new HazardEntry(BLINDING, blind)); 
+      data.addEntry(new HazardEntry(BLINDING, blind));
     if (expl > 0.0F)
-      data.addEntry(new HazardEntry(EXPLOSIVE, expl)); 
+      data.addEntry(new HazardEntry(EXPLOSIVE, expl));
     if (dig > 0.0F)
-      data.addEntry(new HazardEntry(DIGAMMA, dig)); 
+      data.addEntry(new HazardEntry(DIGAMMA, dig));
     if (!data.entries.isEmpty())
-      HazardSystem.registerFluid(f, data); 
+      HazardSystem.registerFluid(f, data);
   }
-  
+
   private static void registerFluidBasic(Fluid fluid) {
     int temp = fluid.getTemperature() - 273;
     HazardData data = new HazardData();
     if (temp > 100)
-      data.addEntry(new HazardEntry(HOT, Math.min(50.0F, temp / 50.0F))); 
+      data.addEntry(new HazardEntry(HOT, Math.min(50.0F, temp / 50.0F)));
     if (temp < -60)
-      data.addEntry(new HazardEntry(CRYOGENIC, Math.abs(temp / 20.0F))); 
+      data.addEntry(new HazardEntry(CRYOGENIC, Math.abs(temp / 20.0F)));
     if (!data.entries.isEmpty())
-      HazardSystem.registerFluid(fluid.getName(), data); 
+      HazardSystem.registerFluid(fluid.getName(), data);
   }
-  
+
   private static HazardData makeData() {
     return new HazardData();
   }
-  
+
   private static HazardData makeData(HazardTypeBase hazard) {
     return (new HazardData()).addEntry(hazard);
   }
-  
+
   private static HazardData makeData(HazardTypeBase hazard, float level) {
     return (new HazardData()).addEntry(hazard, level);
   }
-  
+
   private static HazardData makeData(HazardTypeBase hazard, float level, boolean override) {
     return (new HazardData()).addEntry(hazard, level, override);
   }
-  
+
   private static void registerPWRFuel(ItemPWRFuel.EnumPWRFuel fuel, float baseRad) {
     HazardSystem.register(OreDictManager.DictFrame.fromOne(ModItems.pwr_fuel, (Enum)fuel), makeData(RADIATION, baseRad));
     HazardSystem.register(OreDictManager.DictFrame.fromOne(ModItems.pwr_fuel_hot, (Enum)fuel), makeData(RADIATION, baseRad * 10.0F).addEntry(HOT, 5.0F));
     HazardSystem.register(OreDictManager.DictFrame.fromOne(ModItems.pwr_fuel_depleted, (Enum)fuel), makeData(RADIATION, baseRad * 10.0F));
   }
-  
+
   private static void registerRBMKPellet(Item pellet, float base, float dep) {
     registerRBMKPellet(pellet, base, dep, false, 0.0F, 0.0F);
   }
-  
+
   private static void registerRBMKPellet(Item pellet, float base, float dep, boolean linear) {
     registerRBMKPellet(pellet, base, dep, linear, 0.0F, 0.0F);
   }
-  
+
   private static void registerRBMKPellet(Item pellet, float base, float dep, boolean linear, float blinding, float digamma) {
     HazardData data = new HazardData();
     data.addEntry((new HazardEntry(RADIATION, base)).addMod((HazardModifier)new HazardModifierRBMKRadiation(dep, linear)));
     if (blinding > 0.0F)
-      data.addEntry(new HazardEntry(BLINDING, blinding)); 
+      data.addEntry(new HazardEntry(BLINDING, blinding));
     if (digamma > 0.0F)
-      data.addEntry(new HazardEntry(DIGAMMA, digamma)); 
+      data.addEntry(new HazardEntry(DIGAMMA, digamma));
     HazardSystem.register(pellet, data);
   }
-  
+
   private static void registerRBMKRod(Item rod, float base, float dep) {
     registerRBMK(rod, base, dep, true, false, 0.0F, 0.0F);
   }
-  
+
   private static void registerRBMKRod(Item rod, float base, float dep, float blinding) {
     registerRBMK(rod, base, dep, true, false, blinding, 0.0F);
   }
-  
+
   private static void registerRBMKRod(Item rod, float base, float dep, boolean linear) {
     registerRBMK(rod, base, dep, true, linear, 0.0F, 0.0F);
   }
-  
+
   private static void registerRBMK(Item rod, float base, float dep, boolean hot, boolean linear, float blinding, float digamma) {
     HazardData data = new HazardData();
     data.addEntry((new HazardEntry(RADIATION, base)).addMod((HazardModifier)new HazardModifierRBMKRadiation(dep, linear)));
     if (hot)
-      data.addEntry((new HazardEntry(HOT, 0.0F)).addMod((HazardModifier)new HazardModifierRBMKHot())); 
+      data.addEntry((new HazardEntry(HOT, 0.0F)).addMod((HazardModifier)new HazardModifierRBMKHot()));
     if (blinding > 0.0F)
-      data.addEntry(new HazardEntry(BLINDING, blinding)); 
+      data.addEntry(new HazardEntry(BLINDING, blinding));
     if (digamma > 0.0F)
-      data.addEntry(new HazardEntry(DIGAMMA, digamma)); 
+      data.addEntry(new HazardEntry(DIGAMMA, digamma));
     HazardSystem.register(rod, data);
   }
-  
+
   private static void registerBreedingRodRadiation(ItemBreedingRod.BreedingRodType type, float base) {
     HazardSystem.register(new ItemStack(ModItems.rod, 1, type.ordinal()), makeData(RADIATION, base));
     HazardSystem.register(new ItemStack(ModItems.rod_dual, 1, type.ordinal()), makeData(RADIATION, base * 1.0F));
     HazardSystem.register(new ItemStack(ModItems.rod_quad, 1, type.ordinal()), makeData(RADIATION, base * 2.0F));
   }
-  
+
   private static void registerOtherFuel(Item fuel, float base, float target, boolean blinding) {
     HazardData data = new HazardData();
     data.addEntry((new HazardEntry(RADIATION, base)).addMod((HazardModifier)new HazardModifierFuelRadiation(target)));
     if (blinding)
-      data.addEntry(BLINDING, 20.0F); 
+      data.addEntry(BLINDING, 20.0F);
     HazardSystem.register(fuel, data);
   }
-  
+
   private static void registerOtherFuel(Item fuel, int meta, float base, float target, boolean blinding) {
     HazardData data = new HazardData();
     data.addEntry((new HazardEntry(RADIATION, base)).addMod((HazardModifier)new HazardModifierFuelRadiation(target)));
     if (blinding)
-      data.addEntry(BLINDING, 20.0F); 
+      data.addEntry(BLINDING, 20.0F);
     HazardSystem.register(new ItemStack(fuel, 1, meta), data);
   }
-  
+
   private static void registerRTGPellet(Item pellet, float base, float target) {
     registerRTGPellet(pellet, base, target, 0.0F, 0.0F);
   }
-  
+
   private static void registerRTGPellet(Item pellet, float base, float target, float hot) {
     registerRTGPellet(pellet, base, target, hot, 0.0F);
   }
-  
+
   private static void registerRTGPellet(Item pellet, float base, float target, float hot, float blinding) {
     HazardData data = new HazardData();
     data.addEntry((new HazardEntry(RADIATION, base)).addMod((HazardModifier)new HazardModifierRTGRadiation(target)));
     if (hot > 0.0F)
-      data.addEntry(new HazardEntry(HOT, hot)); 
+      data.addEntry(new HazardEntry(HOT, hot));
     if (blinding > 0.0F)
-      data.addEntry(new HazardEntry(BLINDING, blinding)); 
+      data.addEntry(new HazardEntry(BLINDING, blinding));
     HazardSystem.register(pellet, data);
   }
-  
+
   private static void registerOtherWaste(Item waste, float base) {
     HazardSystem.register(new ItemStack(waste, 1, 0), makeData(RADIATION, base * 0.075F));
     HazardData data = new HazardData();
@@ -986,7 +989,7 @@ public class HazardRegistry {
     data.addEntry(new HazardEntry(HOT, 5.0F));
     HazardSystem.register(new ItemStack(waste, 1, 1), data);
   }
-  
+
   private static void registerRadSourceWaste(Item waste, float base) {
     HazardSystem.register(new ItemStack(waste, 1, 0), makeData(RADIATION, base));
     HazardData data = new HazardData();
