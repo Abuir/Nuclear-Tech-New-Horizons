@@ -894,7 +894,7 @@ public class OreDictManager {
 		public DictFrame digamma(float dad) { 	return this.haz(new HazardEntry(HazardRegistry.DIGAMMA, dad)); }
 		public DictFrame coal(float time) { 	return this.haz(new HazardEntry(HazardRegistry.COAL, time)); }
 		public DictFrame explosive(float e) { 	return this.haz(new HazardEntry(HazardRegistry.EXPLOSIVE, e)); }
-		public DictFrame neutron(float neut) {		return this.haz(new HazardEntry(HazardRegistry.NEUTRON, neut)); }
+		public DictFrame neutron(float neut) {	return this.haz(new HazardEntry(HazardRegistry.NEUTRON, neut)); }
 
 		public DictFrame haz(HazardEntry hazard) {
 			hazards.add(hazard);
@@ -1093,7 +1093,7 @@ public class OreDictManager {
 			return this;
 		}
 
-		/**
+		/*
 		 * Will add a reregistration entry for every mat name of every added DictFrame for the given prefix
 		 * @param prefix The prefix of both the input and result of the reregistration
 		 * @return

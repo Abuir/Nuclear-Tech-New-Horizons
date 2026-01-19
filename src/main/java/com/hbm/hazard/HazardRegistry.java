@@ -192,7 +192,7 @@ public class HazardRegistry {
 	public static final float tcalloy = 0.07F * ingot;
 	public static final float ferro = u238 * 0.7F * ingot;
 
-  // toxicity
+  	// toxicity
 	public static final float lead = 15.0F;
 	public static final float merc = 60.0F;
 	public static final float ars = 1500.0F;
@@ -231,8 +231,6 @@ public class HazardRegistry {
 
     HazardSystem.register(ModItems.powder_wd2004, makeData(DIGAMMA, 1.0F));
 	HazardSystem.register(ModItems.powder_wd2004_tiny, makeData(DIGAMMA, 0.05F));
-	registerHazItem(Blocks.END_ROD, 0.6F);
-	registerHazItem(block_meteor_molten, 0, 1F);
 
 	HazardSystem.register(ModItems.cordite, makeData(EXPLOSIVE, 2.0F));
 	HazardSystem.register(ModItems.ballistite, makeData(EXPLOSIVE, 1.0F));
@@ -241,10 +239,9 @@ public class HazardRegistry {
     HazardSystem.register(ModBlocks.det_cord, makeData(EXPLOSIVE, 1.0F));
     HazardSystem.register(ModBlocks.det_charge, makeData(EXPLOSIVE, 30.0F));
 
-	registerHazItem(insert_du, u238 * block);
-	registerHazItem(insert_ferrouranium, ferro * 4);
-	registerHazItem(insert_polonium, po210 * 2);
-	registerHazItem(insert_ghiorsium, gh336 * 4);
+	registerHazItem(ModItems.insert_du, u238 * block);
+	registerHazItem(ModItems.insert_polonium, po210 * 2);
+	registerHazItem(ModItems.insert_ghiorsium, gh336 * 4);
 	HazardSystem.register(ModItems.powder_tennessine, makeData(RADIATION, ts*powder));
 	HazardSystem.register(ModItems.ingot_tcalloy, makeData(RADIATION, tcalloy*ingot));
 	HazardSystem.register(ModItems.powder_tcalloy, makeData(RADIATION, tcalloy*powder));
@@ -258,6 +255,7 @@ public class HazardRegistry {
     HazardSystem.register(OreDictManager.TCALLOY.heavyBarrel(), makeData(RADIATION, tcalloy*ingot*6));
     HazardSystem.register(OreDictManager.TCALLOY.lightReceiver(), makeData(RADIATION, tcalloy*recieverL));
     HazardSystem.register(OreDictManager.TCALLOY.heavyReceiver(), makeData(RADIATION, tcalloy*recieverH));
+	HazardSystem.register(OreDictManager.PB.bolt(), makeData(TOXIC, lead*ingot*0.125F));
     HazardSystem.register(OreDictManager.FERRO.plateCast(), makeData(RADIATION, ferro*plateCast));
     HazardSystem.register(OreDictManager.FERRO.heavyBarrel(), makeData(RADIATION, ferro*ingot*6));
     HazardSystem.register(OreDictManager.FERRO.heavyReceiver(), makeData(RADIATION, ferro*recieverH));
@@ -287,6 +285,10 @@ public class HazardRegistry {
     HazardSystem.register(OreDictManager.P_WHITE.fragment(), makeData(HOT, 0.22F));
     HazardSystem.register(OreDictManager.ASBESTOS.fragment(), makeData(ASBESTOS, 0.22F));
     HazardSystem.register(OreDictManager.SEMTEX.fragment(), makeData(EXPLOSIVE, 0.275F));
+
+	HazardSystem.register(ModItems.powder_paleogenite_tiny, makeData(DIGAMMA, 0.0005F));
+	HazardSystem.register(ModItems.powder_paleogenite, makeData(DIGAMMA, 0.005F));
+	HazardSystem.register(ModItems.powder_impure_osmiridium, makeData(DIGAMMA, 0.010F));
     //HazardSystem.register(ModBlocks.ore_tikite, makeData(RADIATION, 20.0F));
 
     HazardSystem.register("dustCoal", makeData(COAL, 3.0F));
@@ -300,8 +302,8 @@ public class HazardRegistry {
     HazardSystem.register(ModItems.apple_lead, makeData(TOXIC, 1.0F));
     registerHazItem(ModItems.apple_schrabidium, 12.0F, 0.0F, 50.0F);
     registerHazItem(ModItems.glowing_stew, 2.0F);
-    registerHazItem(ModItems.balefire_scrambled, 360000.0F, 6.0F, 30.0F, 1000.0F, 6.0F);
-    registerHazItem(ModItems.balefire_and_ham, 420000.0F, 30.0F, 30.0F, 2000.0F, 6.0F);
+    registerHazItem(ModItems.balefire_scrambled, radspice * powder + bf, 6.0F, 30.0F, 1000.0F, 6.0F);
+    registerHazItem(ModItems.balefire_and_ham, 2 * radspice * powder + bf, 30.0F, 30.0F, 2000.0F, 6.0F);
 
     HazardSystem.register(ModItems.powder_poison, makeData(TOXIC, 12000.0F));
     HazardSystem.register(ModItems.nugget_lead, makeData(TOXIC, lead*nugget));
@@ -325,7 +327,7 @@ public class HazardRegistry {
     HazardSystem.register(OreDictManager.ABRONZE.lightReceiver(), makeData(TOXIC, ars*nugget*4));
     HazardSystem.register(OreDictManager.ABRONZE.heavyReceiver(), makeData(TOXIC, ars*ingot));
     HazardSystem.register(ModItems.ingot_gaas, makeData(TOXIC, ars*nugget*3));
-    HazardSystem.register(ModItems.nugget_gaas, makeData(TOXIC, ars*nuget/3));
+    HazardSystem.register(ModItems.nugget_gaas, makeData(TOXIC, ars*nugget/3));
     HazardSystem.register(ModItems.billet_gaas, makeData(TOXIC, ars*nugget*2));
     HazardSystem.register(ModItems.powder_ice, makeData(CRYOGENIC, 4.0F));
     //HazardSystem.register(ModBlocks.ore_tikite, makeData(CRYOGENIC, 4.0F));
@@ -334,7 +336,8 @@ public class HazardRegistry {
     HazardSystem.register(ModItems.cell_sas3, makeData().addEntry(RADIATION, 5.0F).addEntry(BLINDING, 60.0F));
     HazardSystem.register(ModItems.cell_balefire, makeData(RADIATION, 50.0F));
     HazardSystem.register(ModItems.powder_balefire, makeData(RADIATION, 500.0F));
-    HazardSystem.register(ModItems.egg_balefire_shard, makeData(RADIATION, 33000.0F));
+    HazardSystem.register(ModItems.egg_balefire_shard, makeData(RADIATION, bf * nugget));
+	HazardSystem.register(ModItems.egg_balefire, makeData(RADIATION, bf * ingot));
     HazardSystem.register(ModItems.solid_fuel_bf, makeData(RADIATION, 1000.0F));
     HazardSystem.register(ModItems.solid_fuel_presto_bf, makeData(RADIATION, 2000.0F));
     HazardSystem.register(ModItems.nuclear_waste_long, makeData(RADIATION, 5.0F));
@@ -670,9 +673,13 @@ public class HazardRegistry {
     HazardSystem.register(ModItems.holotape_damaged, makeData(DIGAMMA, 1000.0F));
 
     for (String oreg : OreDictManager.AS.all(MaterialShapes.ORE))
-      HazardSystem.register(oreg, makeData(TOXIC, 12000.0F));
+    	HazardSystem.register(oreg, makeData(TOXIC, ars*ore));
     for (String oreg : OreDictManager.PB.all(MaterialShapes.ORE))
-      HazardSystem.register(oreg, makeData(TOXIC, 120.0F));
+    	HazardSystem.register(oreg, makeData(TOXIC, lead*ore));
+
+	registerHazItem(ModBlocks.anvil_ferrouranium, ferro * 10);
+	registerHazItem(ModBlocks.anvil_schrabidate, sb * 10);
+	HazardSystem.register(ModBlocks.anvil_osmiridium, makeData(DIGAMMA, 0.4F));
 
     Item recWaste = Compat.tryLoadItem("ReactorCraft", "reactorcraft_item_waste");
     if (recWaste != null)

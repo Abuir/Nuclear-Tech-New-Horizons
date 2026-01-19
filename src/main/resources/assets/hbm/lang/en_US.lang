@@ -7126,6 +7126,14 @@ trait.hydro=Hydroreactive
 trait.neutron=Neutron Radiation
 trait.radioactive=Radioactive
 trait.radResistance=Radiation resistance: %s
+trait.cryogenic=Cryogenic / Cold
+trait.toxic=toxicity
+
+adjective.extreme=Extreme
+adjective.high=High
+adjective.little=Low
+adjective.medium=Moderate
+adjective.veryhigh=Very high
 
 trait.rbmk.coreTemp=Core temp: %s
 trait.rbmk.depletion=Depletion: %s
