@@ -42,341 +42,258 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
 public class HazardRegistry {
-  public static final float gen_S = 10000.0F;
 
-  public static final float gen_H = 2000.0F;
+	//CO60		             5a		β−	030.00Rad/s	Spicy
+	//SR90		            29a		β−	015.00Rad/s Spicy
+	//TC99		       211,000a		β−	002.75Rad/s	Spicy
+	//I181		           192h		β−	150.00Rad/s	2 much spice :(
+	//XE135		             9h		β−	aaaaaaaaaaaaaaaa
+	//CS137		            30a		β−	020.00Rad/s	Spicy
+	//AU198		            64h		β−	500.00Rad/s	2 much spice :(
+	//PB209		             3h		β−	10,000.00Rad/s mama mia my face is melting off
+	//AT209		             5h		β+	like 7.5k or sth idk bruv
+	//PO210		           138d		α	075.00Rad/s	Spicy
+	//RA226		         1,600a		α	007.50Rad/s
+	//AC227		            22a		β−	030.00Rad/s Spicy
+	//TH232		14,000,000,000a		α	000.10Rad/s
+	//U233		       160,000a		α	005.00Rad/s
+	//U235		   700,000,000a		α	001.00Rad/s
+	//U238		 4,500,000,000a		α	000.25Rad/s
+	//NP237		     2,100,000a		α	002.50Rad/s
+	//PU238		            88a		α	010.00Rad/s	Spicy
+	//PU239		        24,000a		α	005.00Rad/s
+	//PU240		         6,600a		α	007.50Rad/s
+	//PU241		            14a		β−	025.00Rad/s	Spicy
+	//		           432a		α	008.50Rad/s
+	//AM242		           141a		β−	009.50Rad/s
+
+	//from newguy: if the neutron system is a bit convoluted for you (or i'm just retarded), basically just assign the radiation value here as usual, then in OreDictManager add ".neutron(HazardRegistry.yourmaterial/number you want to divide by", which will take the radiation value assigned here and divide it by the number you put there
+
+	//simplified groups for ReC compat
+	public static final float gen_S = 10000.0F;
+	public static final float gen_H = 2000.0F;
+	public static final float gen_10D = 100.0F;
+	public static final float gen_100D = 80.0F;
+	public static final float gen_1Y = 50.0F;
+	public static final float gen_10Y = 30.0F;
+	public static final float gen_100Y = 10.0F;
+	public static final float gen_1K = 7.5F;
+	public static final float gen_10K = 6.25F;
+	public static final float gen_100K = 5.0F;
+	public static final float gen_1M = 2.5F;
+	public static final float gen_10M = 1.5F;
+	public static final float gen_100M = 1.0F;
+	public static final float gen_1B = 0.5F;
+	public static final float gen_10B = 0.1F;
+
+	public static final float co60 = 30.0F;
+	public static final float sr90 = 15.0F;
+	public static final float tc99 = 2.75F;
+	public static final float i131 = 150.0F;
+	public static final float xe135 = 1250.0F;
+	public static final float cs137 = 20.0F;
+	public static final float au198 = 500.0F;
+	public static final float pb209 = 10000.0F;
+	public static final float at209 = 7500.0F;
+	public static final float po210 = 75.0F;
+	public static final float ra226 = 7.5F;
+	public static final float ac227 = 30.0F;
+	public static final float th232 = 0.1F;
+	public static final float thf = 1.75F;
+	public static final float u = 0.35F;
+	public static final float u233 = 5.0F;
+	public static final float u235 = 1.0F;
+	public static final float u238 = 0.25F;
+	public static final float uf = 0.5F;
+	public static final float np237 = 2.5F;
+	public static final float npf = 1.5F;
+	public static final float pu = 7.5F;
+	public static final float purg = 6.25F;
+	public static final float pu238 = 10.0F;
+	public static final float pu239 = 5.0F;
+	public static final float pu240 = 7.5F;
+	public static final float pu241 = 25.0F;
+	public static final float puf = 4.25F;
+	public static final float am241 = 8.5F;
+	public static final float cm242 = 9.3F;
+	public static final float cm243 = 5.6F;
+	public static final float cm244 = 2.0F;
+	public static final float cm245 = 0.8F;
+	public static final float cm246 = 2.5F;
+	public static final float cm247 = 0.2F;
+	public static final float cmrg = 6.0F;
+	public static final float cmf = 2.2F;
+	public static final float bk247 = 10.5F;
+	public static final float cf251 = 14.3F;
+	public static final float cf252 = 15.3F;
+	public static final float es253 = 18.3F;
+	public static final float es255 = 19.3F;
+	public static final float am242 = 9.5F;
+	public static final float amrg = 9.0F;
+	public static final float amf = 4.75F;
+	public static final float mox = 2.5F;
+	public static final float sa326 = 15.0F;
+	public static final float sa327 = 17.5F;
+	public static final float saf = 5.85F;
+	public static final float sas3 = 5.0F;
+	public static final float gh336 = 25.0F;
+	public static final float mud = 1.0F;
+	public static final float cn989 = 89.0F;
+	public static final float radsource_mult = 3.0F;
+	public static final float pobe = po210 * radsource_mult;
+	public static final float rabe = ra226 * radsource_mult;
+	public static final float pube = pu238 * radsource_mult;
+	public static final float zfb_bi = 0.35F;
+	public static final float zfb_pu241 = 12.5F;
+	public static final float zfb_am_mix = 4.5F;
+	public static final float bf = 300000.0F;
+	public static final float bfb = 500000.0F;
+	public static final float radspice = 20000.0F;
+	public static final float unof = 10000.0F;
+	public static final float ts = 120.0F;
+	public static final float sr = 1.5F;
+	public static final float sb = 3.0F;
+	public static final float trx = 25.0F;
+	public static final float trn = 0.1F;
+	public static final float wst = 450.0F;
+	public static final float wstv = 150.0F;
+	public static final float yc = 0.42000002F;
+	public static final float fo = 10.0F;
+
+
+	public static final float nugget = 0.11F;
+	public static final float ingot = 1.0F;
+	public static final float gem = 1.0F;
+	public static final float plate = ingot;
+	public static final float plateCast = plate*3;
+	public static final float plateWeld = plate*6;
+	public static final float heavyComp = 768.0F;
+	public static final float wire = nugget;
+	public static final float wireDense = ingot;
+	public static final float recieverL = ingot*4;
+	public static final float recieverH = ingot*9;
+	public static final float pipe = ingot*3;
+	public static final float shell = ingot*4;
+	public static final float bolt = nugget;
+	public static final float powder_mult = 2.0F;
+	public static final float powder = ingot*powder_mult;
+	public static final float powder_tiny = nugget*powder_mult;
+	public static final float ore = ingot*0.8F;
+	public static final float specore = ore;
+	public static final float block = ingot*9;
+	public static final float crystal = block;
+	public static final float billet = 0.5F;
+	public static final float rtg = billet*3;
+	public static final float rod = 0.5F;
+	public static final float rod_dual = rod*2;
+	public static final float rod_quad = rod*4;
+	public static final float rod_rbmk = rod*8;
+	public static final float magt = nugget * 0.5F * sa326 * ingot;
+	public static final float tcalloy = 0.07F * ingot;
+	public static final float ferro = u238 * 0.7F * ingot;
+
+  // toxicity
+	public static final float lead = 15.0F;
+	public static final float merc = 60.0F;
+	public static final float ars = 1500.0F;
+
+	public static final HazardTypeBase RADIATION = (HazardTypeBase)new HazardTypeRadiation();
+	public static final HazardTypeBase DIGAMMA = (HazardTypeBase)new HazardTypeDigamma();
+	public static final HazardTypeBase HOT = (HazardTypeBase)new HazardTypeHot();
+	public static final HazardTypeBase BLINDING = (HazardTypeBase)new HazardTypeBlinding();
+	public static final HazardTypeBase ASBESTOS = (HazardTypeBase)new HazardTypeAsbestos();
+	public static final HazardTypeBase COAL = (HazardTypeBase)new HazardTypeCoal();
+	public static final HazardTypeBase HYDROACTIVE = (HazardTypeBase)new HazardTypeHydroactive();
+	public static final HazardTypeBase EXPLOSIVE = (HazardTypeBase)new HazardTypeExplosive();
+	public static final HazardTypeBase AUTISM = (HazardTypeBase)new HazardTypeAutism();
+	public static final HazardTypeBase GLITCH = (HazardTypeBase)new HazardTypeGlitch();
+	public static final HazardTypeBase NEUTRON = (HazardTypeBase)new HazardTypeNeutron();
+	public static final HazardTypeBase CRYOGENIC = (HazardTypeBase)new HazardTypeCryogenic();
+	public static final HazardTypeBase TOXIC = (HazardTypeBase)new HazardTypeToxic();
+
+	public static void registerItems() {
 
-  public static final float gen_10D = 100.0F;
-
-  public static final float gen_100D = 80.0F;
-
-  public static final float gen_1Y = 50.0F;
-
-  public static final float gen_10Y = 30.0F;
-
-  public static final float gen_100Y = 10.0F;
-
-  public static final float gen_1K = 7.5F;
-
-  public static final float gen_10K = 6.25F;
-
-  public static final float gen_100K = 5.0F;
-
-  public static final float gen_1M = 2.5F;
-
-  public static final float gen_10M = 1.5F;
-
-  public static final float gen_100M = 1.0F;
-
-  public static final float gen_1B = 0.5F;
-
-  public static final float gen_10B = 0.1F;
-
-  public static final float co60 = 30.0F;
-
-  public static final float sr90 = 15.0F;
-
-  public static final float tc99 = 2.75F;
-
-  public static final float i131 = 150.0F;
-
-  public static final float xe135 = 1250.0F;
-
-  public static final float cs137 = 20.0F;
-
-  public static final float au198 = 500.0F;
-
-  public static final float pb209 = 10000.0F;
-
-  public static final float at209 = 7500.0F;
-
-  public static final float po210 = 75.0F;
-
-  public static final float ra226 = 7.5F;
-
-  public static final float ac227 = 30.0F;
-
-  public static final float th232 = 0.1F;
-
-  public static final float thf = 1.75F;
-
-  public static final float u = 0.35F;
-
-  public static final float u233 = 5.0F;
-
-  public static final float u235 = 1.0F;
-
-  public static final float u238 = 0.25F;
-
-  public static final float uf = 0.5F;
-
-  public static final float np237 = 2.5F;
-
-  public static final float npf = 1.5F;
-
-  public static final float pu = 7.5F;
-
-  public static final float purg = 6.25F;
-
-  public static final float pu238 = 10.0F;
-
-  public static final float pu239 = 5.0F;
-
-  public static final float pu240 = 7.5F;
-
-  public static final float pu241 = 25.0F;
-
-  public static final float puf = 4.25F;
-
-  public static final float am241 = 8.5F;
-
-  public static final float cm242 = 9.3F;
-
-  public static final float cm243 = 5.6F;
-
-  public static final float cm244 = 2.0F;
-
-  public static final float cm245 = 0.8F;
-
-  public static final float cm246 = 2.5F;
-
-  public static final float cm247 = 0.2F;
-
-  public static final float cmrg = 6.0F;
-
-  public static final float cmf = 2.2F;
-
-  public static final float bk247 = 10.5F;
-
-  public static final float cf251 = 14.3F;
-
-  public static final float cf252 = 15.3F;
-
-  public static final float es253 = 18.3F;
-
-  public static final float es255 = 19.3F;
-
-  public static final float am242 = 9.5F;
-
-  public static final float amrg = 9.0F;
-
-  public static final float amf = 4.75F;
-
-  public static final float mox = 2.5F;
-
-  public static final float sa326 = 15.0F;
-
-  public static final float sa327 = 17.5F;
-
-  public static final float saf = 5.85F;
-
-  public static final float sas3 = 5.0F;
-
-  public static final float gh336 = 5.0F;
-
-  public static final float mud = 1.0F;
-
-  public static final float cn989 = 89.0F;
-
-  public static final float radsource_mult = 3.0F;
-
-  public static final float pobe = 225.0F;
-
-  public static final float rabe = 22.5F;
-
-  public static final float pube = 30.0F;
-
-  public static final float zfb_bi = 0.35F;
-
-  public static final float zfb_pu241 = 12.5F;
-
-  public static final float zfb_am_mix = 4.5F;
-
-  public static final float bf = 300000.0F;
-
-  public static final float bfb = 500000.0F;
-
-  public static final float radspice = 20000.0F;
-
-  public static final float unof = 10000.0F;
-
-  public static final float ts = 120.0F;
-
-  public static final float sr = 1.5F;
-
-  public static final float sb = 3.0F;
-
-  public static final float trx = 25.0F;
-
-  public static final float trn = 0.1F;
-
-  public static final float wst = 450.0F;
-
-  public static final float wstv = 150.0F;
-
-  public static final float yc = 0.42000002F;
-
-  public static final float fo = 10.0F;
-
-  public static final float nugget = 0.11F;
-
-  public static final float ingot = 1.0F;
-
-  public static final float gem = 1.0F;
-
-  public static final float plate = 1.0F;
-
-  public static final float plateCast = 3.0F;
-
-  public static final float plateWeld = 6.0F;
-
-  public static final float heavyComp = 768.0F;
-
-  public static final float wire = 0.11F;
-
-  public static final float wireDense = 1.0F;
-
-  public static final float pipe = 3.0F;
-
-  public static final float shell = 4.0F;
-
-  public static final float bolt = 0.11F;
-
-  public static final float powder_mult = 3.0F;
-
-  public static final float powder = 3.0F;
-
-  public static final float powder_tiny = 0.32999998F;
-
-  public static final float ore = 0.8F;
-
-  public static final float specore = 1.0F;
-
-  public static final float block = 9.0F;
-
-  public static final float crystal = 9.0F;
-
-  public static final float billet = 0.5F;
-
-  public static final float rtg = 1.5F;
-
-  public static final float rod = 0.5F;
-
-  public static final float rod_dual = 1.0F;
-
-  public static final float rod_quad = 2.0F;
-
-  public static final float rod_rbmk = 4.0F;
-
-  public static final float magt = 0.825F;
-
-  public static final float tcalloy = 0.07F;
-
-  public static final float ferro = 0.175F;
-
-  public static final float lead = 15.0F;
-
-  public static final float merc = 60.0F;
-
-  public static final float ars = 1500.0F;
-
-  public static final HazardTypeBase RADIATION = (HazardTypeBase)new HazardTypeRadiation();
-
-  public static final HazardTypeBase DIGAMMA = (HazardTypeBase)new HazardTypeDigamma();
-
-  public static final HazardTypeBase HOT = (HazardTypeBase)new HazardTypeHot();
-
-  public static final HazardTypeBase BLINDING = (HazardTypeBase)new HazardTypeBlinding();
-
-  public static final HazardTypeBase ASBESTOS = (HazardTypeBase)new HazardTypeAsbestos();
-
-  public static final HazardTypeBase COAL = (HazardTypeBase)new HazardTypeCoal();
-
-  public static final HazardTypeBase HYDROACTIVE = (HazardTypeBase)new HazardTypeHydroactive();
-
-  public static final HazardTypeBase EXPLOSIVE = (HazardTypeBase)new HazardTypeExplosive();
-
-  public static final HazardTypeBase AUTISM = (HazardTypeBase)new HazardTypeAutism();
-
-  public static final HazardTypeBase GLITCH = (HazardTypeBase)new HazardTypeGlitch();
-
-  public static final HazardTypeBase NEUTRON = (HazardTypeBase)new HazardTypeNeutron();
-
-  public static final HazardTypeBase CRYOGENIC = (HazardTypeBase)new HazardTypeCryogenic();
-
-  public static final HazardTypeBase TOXIC = (HazardTypeBase)new HazardTypeToxic();
-
-  public static void registerItems() {
     HazardSystem.register(Items.gunpowder, makeData(EXPLOSIVE, 1.0F));
     HazardSystem.register(Blocks.tnt, makeData(EXPLOSIVE, 4.0F));
-    HazardSystem.register(Items.pumpkin_pie, makeData(EXPLOSIVE, 1.0F));
+	HazardSystem.register(Items.pumpkin_pie, makeData(EXPLOSIVE, 1.0F));
+
     HazardSystem.register(new ItemStack(Item.getItemFromBlock(ModBlocks.bobblehead), 1, 22), makeData(ASBESTOS, 1F)); //this works okay
 	HazardSystem.register(new ItemStack(Item.getItemFromBlock(ModBlocks.bobblehead), 1, 25), makeData(GLITCH, 1F));
+
     HazardSystem.register(ModItems.ammonium_nitrate, makeData(EXPLOSIVE, 4.0F));
     HazardSystem.register(ModItems.ball_dynamite, makeData(EXPLOSIVE, 2.0F));
     HazardSystem.register(ModItems.stick_dynamite, makeData(EXPLOSIVE, 1.0F));
     HazardSystem.register(ModItems.stick_tnt, makeData(EXPLOSIVE, 1.5F));
     HazardSystem.register(ModItems.stick_semtex, makeData(EXPLOSIVE, 2.5F));
     HazardSystem.register(ModItems.stick_c4, makeData(EXPLOSIVE, 2.5F));
+
     HazardSystem.register(ModItems.sat_gerald, makeData(AUTISM, 1.0F));
+
     HazardSystem.register(ModItems.powder_wd2004, makeData(DIGAMMA, 1.0F));
-    HazardSystem.register(ModItems.powder_wd2004_tiny, makeData(DIGAMMA, 0.05F));
-    HazardSystem.register(ModItems.cordite, makeData(EXPLOSIVE, 2.0F));
-    HazardSystem.register(ModItems.ballistite, makeData(EXPLOSIVE, 1.0F));
+	HazardSystem.register(ModItems.powder_wd2004_tiny, makeData(DIGAMMA, 0.05F));
+	registerHazItem(Blocks.END_ROD, 0.6F);
+	registerHazItem(block_meteor_molten, 0, 1F);
+
+	HazardSystem.register(ModItems.cordite, makeData(EXPLOSIVE, 2.0F));
+	HazardSystem.register(ModItems.ballistite, makeData(EXPLOSIVE, 1.0F));
     HazardSystem.register(ModItems.n2_charge, makeData(EXPLOSIVE, 20.0F));
-    HazardSystem.register(ModItems.custom_tnt, makeData(EXPLOSIVE, 4.0F));
+    //HazardSystem.register(ModItems.custom_tnt, makeData(EXPLOSIVE, 4.0F));
     HazardSystem.register(ModBlocks.det_cord, makeData(EXPLOSIVE, 1.0F));
     HazardSystem.register(ModBlocks.det_charge, makeData(EXPLOSIVE, 30.0F));
-    HazardSystem.register(ModItems.insert_du, makeData(RADIATION, 2.25F));
-    HazardSystem.register(ModItems.insert_polonium, makeData(RADIATION, 100.0F));
-    HazardSystem.register(ModItems.insert_ghiorsium, makeData(RADIATION, 20.0F));
-    HazardSystem.register(ModItems.powder_tennessine, makeData(RADIATION, 228.0F));
-    HazardSystem.register(ModItems.ingot_tcalloy, makeData(RADIATION, 0.07F));
-    HazardSystem.register(ModItems.powder_tcalloy, makeData(RADIATION, 0.21000001F));
-    HazardSystem.register(ModBlocks.barrel_tcalloy, makeData(RADIATION, 0.42000002F));
-    HazardSystem.register(ModBlocks.block_tcalloy, makeData(RADIATION, 0.63F));
-    HazardSystem.register(ModItems.ingot_ferrouranium, makeData(RADIATION, 0.175F));
-    HazardSystem.register(OreDictManager.TCALLOY.plateCast(), makeData(RADIATION, 0.21000001F));
-    HazardSystem.register(OreDictManager.TCALLOY.plateWelded(), makeData(RADIATION, 0.42000002F));
-    HazardSystem.register(OreDictManager.TCALLOY.lightBarrel(), makeData(RADIATION, 0.21000001F));
-    HazardSystem.register(OreDictManager.TCALLOY.heavyBarrel(), makeData(RADIATION, 0.42000002F));
-    HazardSystem.register(OreDictManager.TCALLOY.lightReceiver(), makeData(RADIATION, 0.28F));
-    HazardSystem.register(OreDictManager.TCALLOY.heavyReceiver(), makeData(RADIATION, 0.63F));
-    HazardSystem.register(OreDictManager.FERRO.plateCast(), makeData(RADIATION, 0.525F));
-    HazardSystem.register(OreDictManager.FERRO.heavyBarrel(), makeData(RADIATION, 1.05F));
-    HazardSystem.register(OreDictManager.FERRO.heavyReceiver(), makeData(RADIATION, 1.5749999F));
+
+	registerHazItem(insert_du, u238 * block);
+	registerHazItem(insert_ferrouranium, ferro * 4);
+	registerHazItem(insert_polonium, po210 * 2);
+	registerHazItem(insert_ghiorsium, gh336 * 4);
+	HazardSystem.register(ModItems.powder_tennessine, makeData(RADIATION, ts*powder));
+	HazardSystem.register(ModItems.ingot_tcalloy, makeData(RADIATION, tcalloy*ingot));
+	HazardSystem.register(ModItems.powder_tcalloy, makeData(RADIATION, tcalloy*powder));
+	HazardSystem.register(ModBlocks.barrel_tcalloy, makeData(RADIATION, tcalloy*6));
+	HazardSystem.register(ModBlocks.block_tcalloy, makeData(RADIATION, tcalloy*block));
+	HazardSystem.register(ModItems.ingot_ferrouranium, makeData(RADIATION, ferro*ingot));
+
+    HazardSystem.register(OreDictManager.TCALLOY.plateCast(), makeData(RADIATION, tcalloy*plateCast));
+    HazardSystem.register(OreDictManager.TCALLOY.plateWelded(), makeData(RADIATION, tcalloy*plateWeld));
+    HazardSystem.register(OreDictManager.TCALLOY.lightBarrel(), makeData(RADIATION, tcalloy*ingot*3));
+    HazardSystem.register(OreDictManager.TCALLOY.heavyBarrel(), makeData(RADIATION, tcalloy*ingot*6));
+    HazardSystem.register(OreDictManager.TCALLOY.lightReceiver(), makeData(RADIATION, tcalloy*recieverL));
+    HazardSystem.register(OreDictManager.TCALLOY.heavyReceiver(), makeData(RADIATION, tcalloy*recieverH));
+    HazardSystem.register(OreDictManager.FERRO.plateCast(), makeData(RADIATION, ferro*plateCast));
+    HazardSystem.register(OreDictManager.FERRO.heavyBarrel(), makeData(RADIATION, ferro*ingot*6));
+    HazardSystem.register(OreDictManager.FERRO.heavyReceiver(), makeData(RADIATION, ferro*recieverH));
     HazardSystem.register(OreDictManager.SBD.plateCast(), makeData(RADIATION, 9.0F));
     HazardSystem.register(OreDictManager.SBD.wireDense(), makeData(RADIATION, 3.0F));
-    HazardSystem.register(OreDictManager.SA326.wireFine(), makeData(RADIATION, 1.65F));
-    HazardSystem.register(OreDictManager.SA326.wireDense(), makeData(RADIATION, 15.0F));
-    HazardSystem.register(OreDictManager.U.fragment(), makeData(RADIATION, 0.0385F));
-    HazardSystem.register(OreDictManager.U233.fragment(), makeData(RADIATION, 0.55F));
-    HazardSystem.register(OreDictManager.U235.fragment(), makeData(RADIATION, 0.11F));
-    HazardSystem.register(OreDictManager.U238.fragment(), makeData(RADIATION, 0.0275F));
-    HazardSystem.register(OreDictManager.TH232.fragment(), makeData(RADIATION, 0.011F));
-    HazardSystem.register(OreDictManager.PU.fragment(), makeData(RADIATION, 0.825F));
-    HazardSystem.register(OreDictManager.PU239.fragment(), makeData(RADIATION, 0.55F));
-    HazardSystem.register(OreDictManager.NP237.fragment(), makeData(RADIATION, 0.275F));
-    HazardSystem.register(OreDictManager.PO210.fragment(), makeData(RADIATION, 8.25F));
-    HazardSystem.register(OreDictManager.TC99.fragment(), makeData(RADIATION, 0.3025F));
-    HazardSystem.register(OreDictManager.RA226.fragment(), makeData(RADIATION, 0.825F));
-    HazardSystem.register(OreDictManager.CO60.fragment(), makeData(RADIATION, 3.3F));
-    HazardSystem.register(OreDictManager.AU198.fragment(), makeData(RADIATION, 55.0F));
-    HazardSystem.register(OreDictManager.PB209.fragment(), makeData(RADIATION, 1100.0F));
-    HazardSystem.register(OreDictManager.SA326.fragment(), makeData(RADIATION, 1.65F));
-    HazardSystem.register(OreDictManager.SA327.fragment(), makeData(RADIATION, 1.925F));
-    HazardSystem.register(OreDictManager.GH336.fragment(), makeData(RADIATION, 0.55F));
+    HazardSystem.register(OreDictManager.SA326.wireFine(), makeData(RADIATION, sa326*nugget));
+    HazardSystem.register(OreDictManager.SA326.wireDense(), makeData(RADIATION, sa326*ingot));
+    HazardSystem.register(OreDictManager.U.fragment(), makeData(RADIATION, u*ore));
+    HazardSystem.register(OreDictManager.U233.fragment(), makeData(RADIATION, u233*ore));
+    HazardSystem.register(OreDictManager.U235.fragment(), makeData(RADIATION, u235*ore));
+    HazardSystem.register(OreDictManager.U238.fragment(), makeData(RADIATION, u238*ore));
+    HazardSystem.register(OreDictManager.TH232.fragment(), makeData(RADIATION, th232*ore));
+    HazardSystem.register(OreDictManager.PU.fragment(), makeData(RADIATION, pu*ore));
+    HazardSystem.register(OreDictManager.PU239.fragment(), makeData(RADIATION, pu239*ore));
+    HazardSystem.register(OreDictManager.NP237.fragment(), makeData(RADIATION, np237*ore));
+    HazardSystem.register(OreDictManager.PO210.fragment(), makeData(RADIATION, po210*ore));
+    HazardSystem.register(OreDictManager.TC99.fragment(), makeData(RADIATION, tc99*ore));
+    HazardSystem.register(OreDictManager.RA226.fragment(), makeData(RADIATION, ra226*ore));
+    HazardSystem.register(OreDictManager.CO60.fragment(), makeData(RADIATION, co60*ore));
+    HazardSystem.register(OreDictManager.AU198.fragment(), makeData(RADIATION, au198*ore));
+    HazardSystem.register(OreDictManager.PB209.fragment(), makeData(RADIATION, pb209*ore));
+    HazardSystem.register(OreDictManager.SA326.fragment(), makeData(RADIATION, sa326*ore));
+    HazardSystem.register(OreDictManager.SA327.fragment(), makeData(RADIATION, sa327*ore));
+    HazardSystem.register(OreDictManager.GH336.fragment(), makeData(RADIATION, gh336*ore));
     HazardSystem.register(OreDictManager.NA.fragment(), makeData(HYDROACTIVE, 0.11F));
     HazardSystem.register(OreDictManager.LI.fragment(), makeData(HYDROACTIVE, 0.11F));
     HazardSystem.register(OreDictManager.P_WHITE.fragment(), makeData(HOT, 0.22F));
     HazardSystem.register(OreDictManager.ASBESTOS.fragment(), makeData(ASBESTOS, 0.22F));
     HazardSystem.register(OreDictManager.SEMTEX.fragment(), makeData(EXPLOSIVE, 0.275F));
-    HazardSystem.register(ModBlocks.ore_tikite, makeData(RADIATION, 20.0F));
+    //HazardSystem.register(ModBlocks.ore_tikite, makeData(RADIATION, 20.0F));
+
     HazardSystem.register("dustCoal", makeData(COAL, 3.0F));
-    HazardSystem.register("dustTinyCoal", makeData(COAL, 0.32999998F));
+    HazardSystem.register("dustTinyCoal", makeData(COAL, 0.33F));
     HazardSystem.register("dustLignite", makeData(COAL, 3.0F));
-    HazardSystem.register("dustTinyLignite", makeData(COAL, 0.32999998F));
-    HazardSystem.register(ModItems.insert_polonium, makeData(RADIATION, 100.0F));
+    HazardSystem.register("dustTinyLignite", makeData(COAL, 0.33F));
+
     HazardSystem.register(ModItems.demon_core_open, makeData(RADIATION, 5.0F));
     HazardSystem.register(ModItems.demon_core_closed, makeData().addEntry(RADIATION, 1000000.0F).addEntry(NEUTRON, 10000.0F));
     HazardSystem.register(ModBlocks.lamp_demon, makeData().addEntry(RADIATION, 1000000.0F).addEntry(NEUTRON, 10000.0F));
