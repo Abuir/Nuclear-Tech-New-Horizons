@@ -289,12 +289,14 @@ public class HazardRegistry {
     	HazardSystem.register(OreDictManager.ASBESTOS.fragment(), makeData(ASBESTOS, 0.22F));
     	HazardSystem.register(OreDictManager.SEMTEX.fragment(), makeData(EXPLOSIVE, 0.275F));
 
-		HazardSystem.register(ModBlocks.ore_tektite_osmiridium, makeData(DIGAMMA, 0.0001F));
-		HazardSystem.register(ModItems.powder_tektite, makeData(DIGAMMA, 0.0001F));
-		HazardSystem.register(ModItems.powder_paleogenite_tiny, makeData(DIGAMMA, 0.0005F));
-		HazardSystem.register(ModItems.powder_paleogenite, makeData(DIGAMMA, 0.005F));
-		HazardSystem.register(ModItems.powder_impure_osmiridium, makeData(DIGAMMA, 0.010F));
-		HazardSystem.register(ModItems.ingot_osmiridium, makeData(DIGAMMA, 0.010F));
+		HazardSystem.register(ModBlocks.ore_tektite_osmiridium, makeData(DIGAMMA, osm*0.01F));
+		HazardSystem.register(ModItems.powder_tektite, makeData(DIGAMMA, osm*0.01F));
+		HazardSystem.register(ModItems.powder_paleogenite_tiny, makeData(DIGAMMA, osm*0.05F));
+		HazardSystem.register(ModItems.powder_paleogenite, makeData(DIGAMMA, osm*0.5F));
+		HazardSystem.register(ModItems.powder_impure_osmiridium, makeData(DIGAMMA, osm));
+		HazardSystem.register(ModItems.ingot_osmiridium, makeData(DIGAMMA, osm));
+		HazardSystem.register(OreDictManager.OSMIRIDIUM.plateCast(), makeData(DIGAMMA, osm*plateCast));
+		HazardSystem.register(OreDictManager.OSMIRIDIUM.plateWelded(), makeData(DIGAMMA, osm*plateWeld));
 
     	HazardSystem.register("dustCoal", makeData(COAL, 3.0F));
     	HazardSystem.register("dustTinyCoal", makeData(COAL, 0.33F));
@@ -406,7 +408,8 @@ public class HazardRegistry {
     	registerOtherFuel((Item)ModItems.rod_zirnox, ItemZirnoxRod.EnumZirnoxType.LES_FUEL.ordinal(), 5.85F, 6750.0F, false);
     	registerOtherFuel((Item)ModItems.rod_zirnox, ItemZirnoxRod.EnumZirnoxType.LITHIUM.ordinal(), 0.0F, 0.001F, false);
     	registerOtherFuel((Item)ModItems.rod_zirnox, ItemZirnoxRod.EnumZirnoxType.ZFB_MOX.ordinal(), 2.5F, 2250.0F, false);
-    	HazardSystem.register(ModItems.rod_zirnox_natural_uranium_fuel_depleted, makeData(RADIATION, 5175.0F));
+
+		HazardSystem.register(ModItems.rod_zirnox_natural_uranium_fuel_depleted, makeData(RADIATION, 5175.0F));
     	HazardSystem.register(ModItems.rod_zirnox_uranium_fuel_depleted, makeData(RADIATION, 4500.0F));
     	HazardSystem.register(ModItems.rod_zirnox_thorium_fuel_depleted, makeData(RADIATION, 3375.0F));
     	HazardSystem.register(ModItems.rod_zirnox_mox_fuel_depleted, makeData(RADIATION, 4500.0F));
@@ -416,6 +419,7 @@ public class HazardRegistry {
     	HazardSystem.register(ModItems.rod_zirnox_les_fuel_depleted, makeData().addEntry(RADIATION, 6750.0F).addEntry(BLINDING, 20.0F));
     	HazardSystem.register(ModItems.rod_zirnox_tritium, makeData(RADIATION, 0.001F));
     	HazardSystem.register(ModItems.rod_zirnox_zfb_mox_depleted, makeData(RADIATION, 2250.0F));
+
     	registerOtherWaste(ModItems.waste_natural_uranium, 2587.5F);
     	registerOtherWaste(ModItems.waste_uranium, 2250.0F);
     	registerOtherWaste(ModItems.waste_thorium, 1687.5F);
@@ -425,6 +429,7 @@ public class HazardRegistry {
     	registerOtherWaste(ModItems.waste_u235, 2475.0F);
     	registerOtherWaste(ModItems.waste_schrabidium, 3375.0F);
     	registerOtherWaste(ModItems.waste_zfb_mox, 1125.0F);
+
     	registerOtherFuel(ModItems.plate_fuel_u233, 5.0F, 5850.0F, false);
     	registerOtherFuel(ModItems.plate_fuel_u235, 1.0F, 4500.0F, false);
     	registerOtherFuel(ModItems.plate_fuel_mox, 2.5F, 7200.0F, false);
@@ -432,6 +437,7 @@ public class HazardRegistry {
     	registerOtherFuel(ModItems.plate_fuel_sa326, 15.0F, 4500.0F, true);
     	registerOtherFuel(ModItems.plate_fuel_ra226be, 11.25F, 74.25F, false);
     	registerOtherFuel(ModItems.plate_fuel_pu238be, 15.0F, 3.3F, false);
+
     	registerOtherWaste(ModItems.waste_plate_u233, 5850.0F);
     	registerOtherWaste(ModItems.waste_plate_u235, 4500.0F);
     	registerOtherWaste(ModItems.waste_plate_mox, 7200.0F);
@@ -439,6 +445,7 @@ public class HazardRegistry {
     	registerOtherWaste(ModItems.waste_plate_sa326, 4500.0F);
     	registerRadSourceWaste(ModItems.waste_plate_ra226be, 74.25F);
     	registerRadSourceWaste(ModItems.waste_plate_pu238be, 3.3F);
+
     	HazardSystem.register(ModItems.debris_graphite, makeData().addEntry(RADIATION, 70.0F).addEntry(HOT, 5.0F));
     	HazardSystem.register(ModItems.debris_metal, makeData(RADIATION, 5.0F));
     	HazardSystem.register(ModItems.debris_fuel, makeData().addEntry(RADIATION, 500.0F).addEntry(HOT, 5.0F));
@@ -483,6 +490,7 @@ public class HazardRegistry {
     	HazardSystem.register(ModItems.billet_po210be, makeData().addEntry(RADIATION, 112.5F).addEntry(NEUTRON, 11.25F));
     	HazardSystem.register(ModItems.billet_ra226be, makeData().addEntry(RADIATION, 11.25F).addEntry(NEUTRON, 1.125F));
     	HazardSystem.register(ModItems.billet_pu238be, makeData().addEntry(RADIATION, 15.0F).addEntry(NEUTRON, 1.5F));
+
     	registerHazItem(ModItems.billet_zfb_bismuth, 0.175F);
     	registerHazItem(ModItems.billet_zfb_pu241, 6.25F);
     	registerHazItem(ModItems.billet_zfb_am_mix, 2.25F);
@@ -499,19 +507,22 @@ public class HazardRegistry {
     	registerHazItem(ModItems.pellet_charged, 420.0F);
     	registerHazItem(ModBlocks.sellafield_slaked, 2.5F);
     	registerHazItem(ModBlocks.waste_leaves, 0.15F);
+
     	for (int i = 0; i < 7; i++) {
 			registerHazItem(new ItemStack(ModBlocks.waste_mycelium, 1, i), (i + 1) * 7.5F);
 			registerHazItem(new ItemStack(ModBlocks.waste_earth, 1, i), ((i + 1) * 4));
 			registerHazItem(new ItemStack(ModBlocks.waste_trinitite, 1, i), ((i + 1) * 10));
 			registerHazItem(new ItemStack(ModBlocks.waste_trinitite_red, 1, i), ((i + 1) * 10));
     	}
+
     	HazardSystem.register(new ItemStack(ModItems.pellet_rtg_depleted, 1, ItemRTGPelletDepleted.DepletedRTGMaterial.NEPTUNIUM.ordinal()), makeData(RADIATION, 3.75F));
     	HazardSystem.register(new ItemStack(ModItems.pellet_rtg_depleted, 1, ItemRTGPelletDepleted.DepletedRTGMaterial.AMERICIUM.ordinal()), makeData(RADIATION, 13.5F));
     	HazardSystem.register(ModItems.pile_rod_uranium, makeData(RADIATION, 0.525F));
     	HazardSystem.register(ModItems.pile_rod_pu239, makeData(RADIATION, !GeneralConfig.enable528 ? 5.8F : 230.625F));
     	HazardSystem.register(ModItems.pile_rod_plutonium, makeData().addEntry(RADIATION, !GeneralConfig.enable528 ? 6.425F : 231.25F).addEntry(NEUTRON, 2.25F));
     	HazardSystem.register(ModItems.pile_rod_source, makeData().addEntry(RADIATION, 33.75F).addEntry(NEUTRON, 3.3750002F));
-    	registerBreedingRodRadiation(ItemBreedingRod.BreedingRodType.TRITIUM, 0.001F);
+
+		registerBreedingRodRadiation(ItemBreedingRod.BreedingRodType.TRITIUM, 0.001F);
     	registerBreedingRodRadiation(ItemBreedingRod.BreedingRodType.CO60, 30.0F);
     	registerBreedingRodRadiation(ItemBreedingRod.BreedingRodType.RA226, 7.5F);
     	registerBreedingRodRadiation(ItemBreedingRod.BreedingRodType.AC227, 30.0F);
@@ -525,6 +536,7 @@ public class HazardRegistry {
     	registerBreedingRodRadiation(ItemBreedingRod.BreedingRodType.RGP, 6.25F);
     	registerBreedingRodRadiation(ItemBreedingRod.BreedingRodType.WASTE, 450.0F);
     	registerBreedingRodRadiation(ItemBreedingRod.BreedingRodType.URANIUM, 0.35F);
+
     	registerRBMKRod((Item)ModItems.rbmk_fuel_ueu, 1.4F, 36000.0F);
     	registerRBMKRod((Item)ModItems.rbmk_fuel_meu, 2.0F, 38700.0F);
     	registerRBMKRod((Item)ModItems.rbmk_fuel_heu233, 20.0F, 55800.0F);
@@ -560,6 +572,7 @@ public class HazardRegistry {
     	registerRBMKRod((Item)ModItems.rbmk_fuel_lecm, 10.56F, 1800.0F);
     	registerRBMKRod((Item)ModItems.rbmk_fuel_mecm, 17.6F, 5400.0F);
     	registerRBMKRod((Item)ModItems.rbmk_fuel_hecm, 35.2F, 9000.0F);
+
     	registerRBMKPellet((Item)ModItems.rbmk_pellet_ueu, 0.175F, 4500.0F);
     	registerRBMKPellet((Item)ModItems.rbmk_pellet_meu, 0.25F, 4837.5F);
     	registerRBMKPellet((Item)ModItems.rbmk_pellet_heu233, 2.5F, 6975.0F);
@@ -595,6 +608,7 @@ public class HazardRegistry {
     	registerRBMKPellet((Item)ModItems.rbmk_pellet_lecm, 3.0F, 17212.5F);
     	registerRBMKPellet((Item)ModItems.rbmk_pellet_mecm, 3.0F, 17901.0F);
     	registerRBMKPellet((Item)ModItems.rbmk_pellet_hecm, 3.0F, 18589.5F);
+
     	HazardSystem.register(OreDictManager.DictFrame.fromOne(ModItems.watz_pellet, (Enum)ItemWatzPellet.EnumWatzType.SCHRABIDIUM), makeData(RADIATION, 60.0F));
     	HazardSystem.register(OreDictManager.DictFrame.fromOne(ModItems.watz_pellet, (Enum)ItemWatzPellet.EnumWatzType.HES), makeData(RADIATION, 23.4F));
     	HazardSystem.register(OreDictManager.DictFrame.fromOne(ModItems.watz_pellet, (Enum)ItemWatzPellet.EnumWatzType.MES), makeData(RADIATION, 23.4F));
@@ -612,7 +626,8 @@ public class HazardRegistry {
     	HazardSystem.register(OreDictManager.DictFrame.fromOne(ModItems.watz_pellet, (Enum)ItemWatzPellet.EnumWatzType.BK247), makeData(RADIATION, 42.0F));
     	HazardSystem.register(OreDictManager.DictFrame.fromOne(ModItems.watz_pellet, (Enum)ItemWatzPellet.EnumWatzType.CF252), makeData(RADIATION, 61.2F));
     	HazardSystem.register(OreDictManager.DictFrame.fromOne(ModItems.watz_pellet, (Enum)ItemWatzPellet.EnumWatzType.ES253), makeData(RADIATION, 73.2F));
-    	registerPWRFuel(ItemPWRFuel.EnumPWRFuel.MEU, 0.5F);
+
+		registerPWRFuel(ItemPWRFuel.EnumPWRFuel.MEU, 0.5F);
     	registerPWRFuel(ItemPWRFuel.EnumPWRFuel.HEU233, 5.0F);
     	registerPWRFuel(ItemPWRFuel.EnumPWRFuel.HEU235, 1.0F);
     	registerPWRFuel(ItemPWRFuel.EnumPWRFuel.MEN, 1.5F);
@@ -627,6 +642,7 @@ public class HazardRegistry {
     	registerPWRFuel(ItemPWRFuel.EnumPWRFuel.HES327, 17.5F);
     	registerPWRFuel(ItemPWRFuel.EnumPWRFuel.BFB_AM_MIX, 4.5F);
     	registerPWRFuel(ItemPWRFuel.EnumPWRFuel.BFB_PU241, 12.5F);
+
     	HazardSystem.register(ModItems.powder_yellowcake, makeData(RADIATION, 1.26F));
     	HazardSystem.register(ModBlocks.block_yellowcake, makeData(RADIATION, 11.34F));
     	HazardSystem.register(ModItems.fallout, makeData(RADIATION, 30.0F));
