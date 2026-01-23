@@ -265,6 +265,7 @@ public class HazardRegistry {
     	HazardSystem.register(OreDictManager.SBD.wireDense(), makeData(RADIATION, 3.0F));
     	HazardSystem.register(OreDictManager.SA326.wireFine(), makeData(RADIATION, sa326*nugget));
     	HazardSystem.register(OreDictManager.SA326.wireDense(), makeData(RADIATION, sa326*ingot));
+
     	HazardSystem.register(OreDictManager.U.fragment(), makeData(RADIATION, u*ore));
     	HazardSystem.register(OreDictManager.U233.fragment(), makeData(RADIATION, u233*ore));
     	HazardSystem.register(OreDictManager.U235.fragment(), makeData(RADIATION, u235*ore));
@@ -279,7 +280,6 @@ public class HazardRegistry {
     	HazardSystem.register(OreDictManager.CO60.fragment(), makeData(RADIATION, co60*ore));
     	HazardSystem.register(OreDictManager.AU198.fragment(), makeData(RADIATION, au198*ore));
     	HazardSystem.register(OreDictManager.PB209.fragment(), makeData(RADIATION, pb209*ore));
-
     	HazardSystem.register(OreDictManager.SA326.fragment(), makeData(RADIATION, sa326*ore));
     	HazardSystem.register(OreDictManager.SA327.fragment(), makeData(RADIATION, sa327*ore));
     	HazardSystem.register(OreDictManager.GH336.fragment(), makeData(RADIATION, gh336*ore));
@@ -294,7 +294,10 @@ public class HazardRegistry {
 		HazardSystem.register(ModItems.powder_paleogenite_tiny, makeData(DIGAMMA, osm*0.05F));
 		HazardSystem.register(ModItems.powder_paleogenite, makeData(DIGAMMA, osm*0.5F));
 		HazardSystem.register(ModItems.powder_impure_osmiridium, makeData(DIGAMMA, osm));
+		HazardSystem.register(ModItems.crystal_osmiridium, makeData(DIGAMMA, osm));
 		HazardSystem.register(ModItems.ingot_osmiridium, makeData(DIGAMMA, osm));
+		HazardSystem.register(ModItems.nugget_osmiridium, makeData(DIGAMMA, osm*nugget));
+		HazardSystem.register(ModBlocks.block_osmiridium, makeData(DIGAMMA, osm*block));
 		HazardSystem.register(OreDictManager.OSMIRIDIUM.plateCast(), makeData(DIGAMMA, osm*plateCast));
 		HazardSystem.register(OreDictManager.OSMIRIDIUM.plateWelded(), makeData(DIGAMMA, osm*plateWeld));
 
