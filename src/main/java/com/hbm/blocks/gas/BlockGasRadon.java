@@ -23,26 +23,26 @@ public class BlockGasRadon extends BlockGasBase {
 
 	@Override
 	public void onEntityCollidedWithBlock(World world, int p_149670_2_, int p_149670_3_, int p_149670_4_, Entity entity) {
-		
+
 		if(!(entity instanceof EntityLivingBase))
 			return;
-		
+
 		EntityLivingBase entityLiving = (EntityLivingBase) entity;
-		
-		if(ArmorRegistry.hasAllProtection(entityLiving, 3, HazardClass.RAD_GAS)) {
+
+		if(ArmorRegistry.hasAllProtection(entityLiving, 3, HazardClass.PARTICLE_FINE)) {
 			ArmorUtil.damageGasMaskFilter(entityLiving, 1);
 		} else {
 			ContaminationUtil.contaminate((EntityLivingBase)entity, HazardType.RADIATION, ContaminationType.RAD_BYPASS, 0.05F);
-			HbmLivingProps.incrementAsbestos((EntityLivingBase)entity, 1); 
+			HbmLivingProps.incrementAsbestos((EntityLivingBase)entity, 1);
 		}
 	}
 
 	@Override
 	public ForgeDirection getFirstDirection(World world, int x, int y, int z) {
-		
+
 		if(world.rand.nextInt(5) == 0)
 			return ForgeDirection.UP;
-		
+
 		return ForgeDirection.DOWN;
 	}
 
@@ -58,7 +58,7 @@ public class BlockGasRadon extends BlockGasBase {
 			world.setBlockToAir(x, y, z);
 			return;
 		}
-		
+
 		super.updateTick(world, x, y, z, rand);
 	}
 }

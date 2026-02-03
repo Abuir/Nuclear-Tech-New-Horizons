@@ -73,7 +73,7 @@ public class ArmorRegistry {
 			ItemStack filter = mask.getFilter(stack, entity);
 
 			if(filter != null) {
-				
+
 				//add the HazardClasses from the filter, then remove the ones blacklisted by the mask
 				if(hazardClasses.containsKey(filter.getItem())) {
 					List<HazardClass> filProt = (List<HazardClass>) hazardClasses.get(filter.getItem()).clone();
@@ -105,7 +105,7 @@ public class ArmorRegistry {
 		PARTICLE_COARSE("hazard.particleCoarse"),		//only affects lungs
 		PARTICLE_FINE("hazard.particleFine"),			//only affects lungs
 		BACTERIA("hazard.bacteria"),					//no half masks
-		//NERVE_AGENT("hazard.nerveAgent"),				//aggressive nerve agent, also attacks skin
+		NERVE_AGENT("hazard.nerveAgent"),				//aggressive nerve agent, also attacks skin
 		GAS_BLISTERING("hazard.corrosive"),				//corrosive substance, also attacks skin
 		SAND("hazard.sand"),							//blinding sand particles
 		LIGHT("hazard.light");							//blinding light
